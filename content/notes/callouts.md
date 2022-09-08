@@ -1,5 +1,6 @@
 ---
 title: "Callouts"
+date: "2022-09-06"
 ---
 
 ## Callout support
@@ -14,7 +15,7 @@ See [documentation on supported types and syntax here](https://help.obsidian.md/
 
 ## Showcase
 
-> [!EXAMPLE] Examples
+> [!EXAMPLE]- Examples
 >
 > Aliases: example
 
