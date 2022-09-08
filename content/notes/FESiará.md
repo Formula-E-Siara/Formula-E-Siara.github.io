@@ -1,5 +1,6 @@
 ---
 title: "Página Inicial"
+permalink: /start
 ---
 
 # Então você quer saber mais sobre o Fórmula-E Siará?
