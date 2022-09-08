@@ -13,7 +13,7 @@ As baterias consideradas inicialmente foram baterias lítio cilíndrica, em espe
 Pressupondo um nível médio de tensão por célula de 3.6V. Com tensão total necessária de 72V e Energia Total aproximada de [6.5kWh](https://webthesis.biblio.polito.it/15660/), obtemos as seguintes configurações:
  
 
----|Sony VTC6 | LG HG2 | Samsung 30Q | Samsung 30T | Samsung 40T | Melasta LPA542126
+---:|Sony VTC6 :| LG HG2 :| Samsung 30Q :| Samsung 30T :| Samsung 40T :| Melasta LPA542126
 ---|-------------|-----|-----------|-------------|-------------|--------------------
 Dimensions|18650 |18650 | 18650 | 21700 | 21700 | Primastic
 Nominal capacity [mAh] | 3120 | 3000 | 3040 | 3000 | 4000 | 6000
@@ -26,10 +26,10 @@ Number of Packs to supply 6.5kWh | 28.9 | 30.1 | 29.7 | 30.1 | 22.6 | 14.6
 Total number of Cells | 600 | 640 | 600 | 640 | 480 | 320
 Total weight (Only Cells) [kg] | 25.0 | 26.1 | 25.0 | 38.0 | 27.8 | 34.3
 
-Tendo uma tensão total de 72V, devemos "serializar" 20 células. (3.6\*72V)
-Além disso, temos dois limitantes para o número de packs: a Energia Total e a Corrente de descarga. Nosso contingente de Energia atual totaBatliza 5.5kWh e a UFPB, como exemplo, totaliza um total de: ################
+Tendo uma tensão total de 72V, devemos "serializar" 20 células. (72V\\3.6V)
+Além disso, temos dois limitantes para o número de packs: a Energia Total e a Corrente de descarga. Nosso contingente de Energia atual totaliza 5.5kWh e a UFPB, como exemplo, totaliza um total de: ################
 
-Para calcular a Corrente que será puxada da nossa bateria, basta especificarmos a potência da nossa carga: Pelas especificações do motor e perda estimada do inversor, obtemos 7.5kW do motor, 0.6kW em perdas do Inversor e uma expectativa de consumo variado pelos componentes eletrônicos de 0.4kW, obtemos um total de 8.5kW.<br/>
+Para calcular a Corrente que será puxada da nossa bateria, basta especificarmos a potência da nossa carga. Pelas especificações, obtemos: 7.5kW do motor, 0.6kW em perdas do Inversor e 0.4kW de componentes eletrônicos, obtemos um total de 8.5kW.<br/>
 Portanto, podemos esperar uma corrente de 120A (8.5kW\\72V). Criando um limitante mínimo para cada possível célula:
 
 ---|Sony VTC6 | LG HG2 | Samsung 30Q | Samsung 30T | Samsung 40T | Melasta LPA542126
