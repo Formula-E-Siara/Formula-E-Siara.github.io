@@ -10,7 +10,7 @@ Ressalvas iniciais:
 
 As baterias consideradas inicialmente foram baterias lítio cilíndrica, em especial pelo seu valor e pela menor necessidade de cuidados especiais que são necessários nas células prismáticas (Maior cuidado com a temperatura e pressão do ambiente).
 
-Pressupondo um nível médio de tensão por célula de 3.6V. Com tensão total necessária de 72V e Energia Total aproximada de [6.5kWh][1], obtemos as seguintes configurações:
+Pressupondo um nível médio de tensão por célula de 3.6V. Com tensão total necessária de 72V e Energia Total aproximada de [6.5kWh](https://webthesis.biblio.polito.it/15660/), obtemos as seguintes configurações:
  
 
 ---|Sony VTC6 | LG HG2 | Samsung 30Q | Samsung 30T | Samsung 40T | Melasta LPA542126
