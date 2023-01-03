@@ -1,0 +1,152 @@
+{
+  "main": {
+    "id": "5cea6ac3a5dedd4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "b51614f60b499cc4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da02c39a55dc5ffe",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "40d7f7bc2e4e5d1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d41ec07ab284fa33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "43a8d380a68449d5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3c3466776ecaff98",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1938b879a4b106af",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2c335a66b60bbc42",
+    "type": "split",
+    "children": [
+      {
+        "id": "99f0e7980ebf117f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "51c216f13687090b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2894033ba6234545",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "70f4a2cee3b1a1cf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4d1d5266eedf9385",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "canvas:Create new canvas": false
+    }
+  },
+  "active": "da02c39a55dc5ffe",
+  "lastOpenFiles": [
+    "Entire wiki.canvas",
+    "content/notes/FESiará.md",
+    "content/notes/elétrica/Inversor de Frequência.md",
+    "content/notes/elétrica/Battery Managment System.md",
+    "content/notes/elétrica/Baterias em Série.md",
+    "content/notes/elétrica/Baterias Possíveis.md",
+    "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
+    "Untitled 1.canvas"
+  ]
+}

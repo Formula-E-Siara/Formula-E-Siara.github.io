@@ -27,7 +27,7 @@ Total number of Cells | 600 | 640 | 600 | 640 | 480 | 320
 Total weight (Only Cells) [kg] | 25.0 | 26.1 | 25.0 | 38.0 | 27.8 | 34.3
 
 Tendo uma tensão total de 72V, devemos "serializar" 20 células. (72V\\3.6V)
-Além disso, temos dois limitantes para o número de packs: a Energia Total e a Corrente de descarga. Nosso contingente de Energia atual totaliza 5.5kWh e a UFPB, como exemplo, totaliza um total de: ################
+Além disso, temos dois limitantes para o número de packs: a Energia Total e a Corrente de descarga. Nosso contingente de Energia atual totaliza 5.5kWh.
 
 Para calcular a Corrente que será puxada da nossa bateria, basta especificarmos a potência da nossa carga. Pelas especificações, obtemos: 7.5kW do motor, 0.6kW em perdas do Inversor e 0.4kW de componentes eletrônicos, obtemos um total de 8.5kW.<br/>
 Portanto, podemos esperar uma corrente de 120A (8.5kW\\72V). Criando um limitante mínimo para cada possível célula:

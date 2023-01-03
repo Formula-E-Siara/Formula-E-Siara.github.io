@@ -1,7 +1,8 @@
 ---
-title: "Baterias de Chumbo-Ácido"
+title: "Balanceamento de Baterias"
 tags:
-- setup
+- elétrica
+- sensoriamento
 weight: -5
-date: "2022-09-06"
+date: "2023-01-03"
 ---

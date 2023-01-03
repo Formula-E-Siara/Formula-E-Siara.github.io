@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"ee171243bdd97e59","x":164,"y":-756,"width":498,"height":556,"type":"file","file":"content/notes/elétrica/Estudo de Baterias Substitutivas.md"},
+		{"id":"acb6b88f437114fe","x":164,"y":13,"width":498,"height":400,"type":"file","file":"content/notes/elétrica/Inversor de Frequência.md"},
+		{"id":"e4106a2b85d9fc6b","x":164,"y":-1426,"width":498,"height":548,"type":"file","file":"content/notes/elétrica/Battery Managment System.md"},
+		{"id":"1efb0476eadc23d4","x":-677,"y":-1062,"width":555,"height":769,"type":"file","file":"content/notes/FESiará.md"},
+		{"id":"7aa4a47e4363a6ca","x":819,"y":-878,"width":498,"height":400,"type":"link","url":"https://webthesis.biblio.polito.it/15660/"}
+	],
+	"edges":[
+		{"id":"9d7e4161c4e1fc9a","fromNode":"1efb0476eadc23d4","fromSide":"right","toNode":"ee171243bdd97e59","toSide":"left"},
+		{"id":"e4ad9ee3a62bd9ff","fromNode":"ee171243bdd97e59","fromSide":"right","toNode":"7aa4a47e4363a6ca","toSide":"left"},
+		{"id":"4c89891923120a74","fromNode":"1efb0476eadc23d4","fromSide":"right","toNode":"acb6b88f437114fe","toSide":"left"},
+		{"id":"fa0db4dfafd1ef58","fromNode":"1efb0476eadc23d4","fromSide":"right","toNode":"e4106a2b85d9fc6b","toSide":"left"}
+	]
+}
