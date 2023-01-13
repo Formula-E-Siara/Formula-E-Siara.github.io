@@ -13,4 +13,6 @@ permalink: /start
 ## Sistema de Propulsão (Powertrain)
 ### [[Inversor de Frequência]]
 ## Eletrônica
+### Autonomia
+- Direção
 ### [[Baterias]]
