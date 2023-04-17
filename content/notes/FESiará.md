@@ -17,5 +17,6 @@ permalink: /start
 ### [[Baterias]]
 
 ## Telemetria
-### [[simulador]]
+### [simulador](notes/telemetria/simulador)
+
 
