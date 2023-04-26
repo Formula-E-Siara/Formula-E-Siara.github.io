@@ -11,8 +11,12 @@
             "id": "da02c39a55dc5ffe",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "content/notes/comorealizarmodificações.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/notes/comorealizarmodificações.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "content/notes/comorealizarmodificações.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "content/notes/comorealizarmodificações.md"
+              }
             }
           }
         ]
@@ -140,13 +148,25 @@
   },
   "active": "da02c39a55dc5ffe",
   "lastOpenFiles": [
-    "Entire wiki.canvas",
+    "Pasted image 20230426145114.png",
+    "Pasted image 20230426145104.png",
     "content/notes/FESiará.md",
+    "content/notes/comorealizarmodificações.md",
+    "notes/images/obsidian-settings.png.md",
+    "notes/images",
+    "notes",
+    "content/notes/telemetria/simulador.md",
+    "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
     "content/notes/elétrica/Inversor de Frequência.md",
+    "content/notes/elétrica/Direção.md",
+    "content/notes/elétrica/CANopen.md",
     "content/notes/elétrica/Battery Managment System.md",
+    "content/notes/elétrica/Baterias de Chumbo-Ácido.md",
+    "content/notes/elétrica/Baterias.md",
+    "content/_index.md",
+    "Entire wiki.canvas",
     "content/notes/elétrica/Baterias em Série.md",
     "content/notes/elétrica/Baterias Possíveis.md",
-    "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
     "Untitled 1.canvas"
   ]
 }

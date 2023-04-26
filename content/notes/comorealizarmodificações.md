@@ -27,12 +27,12 @@ Após [baixar o GitHub Desktop](https://desktop.github.com/), é necessário rea
 
 Obsidian é a melhor forma de realizar alterações na Wiki, por já podermos ter uma prévia de como a página se tornará. Entretanto, se você estiver se sentindo **valente** pode até mesmo realizar as modificações nos arquivos ```.md``` pelo navegador ou Notepad.
 
-Após [baixar e instalar o Obsidian](https://obsidian.md/download) 
+Após [baixar e instalar o Obsidian](https://obsidian.md/download), basta abrir um _vault_ na mesma pasta donde o repositório foi clonado, com essa opção:
+![[Pasted image 20230426145114.png]]
+Com isso, a estrutura da wikia estará de livre alteração. Tome cuidado e não faça besteiras! 😀
 
-## Settings
-Great, now that you have your Obsidian linked to your Quartz, let's fix some settings so that they play well.
 
-1. Under Options > Files and Links, set the New link format to always use Absolute Path in Vault.
-2. Go to Settings > Files & Links > Turn "on" automatically update internal links.
+>[!done] Parabéns!
+>
+Você está preparado para fazer alterações relevantes à equipe do Fórmula-e Siará! 
 
-![Obsidian Settings](/notes/images/obsidian-settings.png)*Obsidian Settings*
