@@ -45,4 +45,14 @@ O módulo de baterias é responsável por monitorar e proteger o pacote de bater
 
 A telemetria é o sistema responsável por transmitir e receber dados entre o veículo e uma estação base. Ela permite acompanhar em tempo real o funcionamento e o desempenho do veículo durante os testes e as provas da competição. A nossa telemetria usa um transceptor sem fio que opera na faixa de 2,4 GHz, com uma taxa de transmissão de 250 kbps. O transceptor se comunica com um computador na estação base, que exibe os dados em uma interface gráfica desenvolvida pela equipe. A telemetria também permite enviar comandos para o veículo, como ligar ou desligar sistemas ou alterar parâmetros de controle.
 
+Considerando essenciais os sentores: IMU, GPS, de velocidade das rodas, LIDAR e câmeras. Freio, propulsão, suspensão → serão analisados e incluídos futuramente. Então só vamos trabalhar com dados dos primeiros tanto para transmitir tanto quanto para dar entrada no controle. 
+
+Para o sensor de RPM a melhor solução é fazer como em carros comerciais, usando o sensor ABS. Que se trata de um sensor indutivo acoplado mirando os dentes da engrenagem do eixo da roda, possibilitando haver uma boa resolução em velocidades altas ou baixas, não pode ser confundido com a saída do eixo do motor, em que pode haver uma redução dele para as rodas. Este sensor mede o RPM real das rodas, não a velocidade do motor.
+
+Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o protocolo CAN, assim como é feito em modelos comerciais e carros de maior porte. Será um sistema híbrido com vários controladores e sensores, independentes, mas trabalhando em conjunto com o computador principal, o qual processa vídeo e envia dados para a telemetria.
+
+# [[Escolha de sensores]]
+
 # [Simulador](./telemetria/simulador.md)
+
+# [[Controle manual à distância]]
