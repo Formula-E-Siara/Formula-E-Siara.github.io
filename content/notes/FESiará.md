@@ -50,9 +50,10 @@ Considerando essenciais os sentores: IMU, GPS, de velocidade das rodas, LIDAR e 
 Para o sensor de RPM a melhor solução é fazer como em carros comerciais, usando o sensor ABS. Que se trata de um sensor indutivo acoplado mirando os dentes da engrenagem do eixo da roda, possibilitando haver uma boa resolução em velocidades altas ou baixas, não pode ser confundido com a saída do eixo do motor, em que pode haver uma redução dele para as rodas. Este sensor mede o RPM real das rodas, não a velocidade do motor.
 
 Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o protocolo CAN, assim como é feito em modelos comerciais e carros de maior porte. Será um sistema híbrido com vários controladores e sensores, independentes, mas trabalhando em conjunto com o computador principal, o qual processa vídeo e envia dados para a telemetria.
+ 
+# [Escolha de sensores](notes/elétrica/Escolha%20de%20sensores.md)
 
-# [[Escolha de sensores]]
 
 # [Simulador](./telemetria/simulador.md)
 
-# [[Controle manual à distância]]
+# [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância)
