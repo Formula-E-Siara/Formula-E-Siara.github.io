@@ -53,7 +53,6 @@ Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o pr
  
 # [Escolha de sensores](notes/elétrica/Escolha%20de%20sensores.md)
 
-
 # [Simulador](./telemetria/simulador.md)
 
 # [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância)
