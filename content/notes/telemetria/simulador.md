@@ -14,8 +14,10 @@ Decidimos por usar um simulador quase de acordo com as necessidades do projeto. 
 ## Como instalar o simulador
 Infelizmente somente funciona em linux, algumas dependências do simulador são do linux apesar da possibilidade de usar o ROS no Windows. No entanto, é possível usar o WSL ou o VirtualBox.
 
+OBS.: o site do EUFS lista Ubuntu 22 e ROS Galactic, mas aqui usamos outras versões. 
+
 ### Requerimentos
-- Ubuntu 20.04
+- Ubuntu 22.04
 - git
 - lsb_release
 - ROS 2 Humble
@@ -23,11 +25,60 @@ Infelizmente somente funciona em linux, algumas dependências do simulador são 
 ### Primeiros passos
 Primeiramente, execute
 ```
+sudo add-apt-repository main
+sudo add-apt-repository universe
 sudo apt install lsb-core lsb-release -y
 ```
-Serve para que o script do ROS detecte a versão correta do Ubuntu, isso realmente aconteceu e consumiu muito tempo. Após isso vamos compilar o ROS da fonte, demora bastante mas, será uma só vez e evita problemas com pacotes no futuro.
+Serve para que o script do ROS detecte a versão correta do Ubuntu, isso realmente deu uma vez erro e consumiu muito tempo. 
 
-Em seguida vá na página do <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS Humble</a>, seguindo os passos tudo deve funcionar normalmente. 
+Em seguida vá na página do <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS Humble</a>, seguindo os passos tudo deve funcionar normalmente. Quando for fazer o `sudo apt install ros-humble-desktop`, não faça, faça isso: `sudo apt install ros-humble-desktop`, para instalar todos os pacotes. Ainda vai faltar, então instale esses pacotes:
+```
+sudo apt install ros-humble-gazebo-ros ros-humble-ackermann-msgs
+```
+
+Agora para outras dependências do simulador, faça
+```
+pip3 install colcon-common-extensions -U
+# se você não tiver python:
+sudo apt install python3 python3-pip
+```
+
+Faça:
+```
+# criamos a pasta do simulador
+cd ~/
+
+# efetivamente fazendo o download dele
+git clone https://github.com/Formula-E-Siara/simulador
+```
+
+Após isso executamos os comandos, mas cuidado, coloque direito para não ter que editar o arquivo do seu bash, dentro da pasta do simulador você pode dar um `pwd` e ver o diretório absoluto. No meu caso, geralmente seria `/home/gusta/simulador`, no seu caso vai ser: `/home/USUARIO/simulador` substituindo pelo seu nome
+```
+echo 'export EUFS_MASTER=(caminho absoluto da pasta do simulador)' >> ~/.bashrc
+source ~/.bashrc
+```
+
+Vamos iniciar o workspace do ros, se você não tiver feito
+```
+source /opt/ros/humble/setup.bash
+```
+
+Esses comandos iniciam o gerenciador de pacote e instalam os pacotes do simulador que baixamos no `git clone`
+```
+sudo apt-get install python3-rosdep
+sudo rosdep init
+rosdep update
+rosdep install --from-paths $EUFS_MASTER --ignore-src -r -y
+```
+
+Volte para a pasta do simulador e faça:
+```
+# entrar na pasta
+cd $EUFS_MASTER
+
+# dentro da pasta
+colcon build
+```
 
 Na hora de instalar o simulador siga o tutorial do EUFS normalmente, no entanto, ao ao chegar na parte de rosdep install, faça source do script do ROS, exemplo, baixei e compilei, abro a pasta que salvei e faço:
 ```
@@ -46,4 +97,7 @@ cd ~/eufs_modified && . install/setup.bash
 # caso estiver na pasta faça
 . install/setup.bash
 # se não der certo substitua o . por source
+
+# para iniciar o simulador
+ros2 launch eufs_launcher eufs_launcher.launch.py
 ```
