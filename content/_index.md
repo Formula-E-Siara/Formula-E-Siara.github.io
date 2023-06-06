@@ -10,5 +10,6 @@ Objetivos:
 2. Promover um ponta-pé inicial para os membros recém-ingressantes.
 
 ## Participe agora mesmo!
-> 🌎 [Página Inicial Fórmula-E Siará](/notes/FESiará.md) <br/>
-> 📚 ["Como realizar modificações na Wiki?"](notes/comorealizarmodificações.md)
+> 🌎 [Página Inicial Fórmula-E Siará](FESiará.md) <br/>
+> 📚 ["Como realizar modificações na Wiki?"](comorealizarmodificações.md) <br/>
+> 💢  [Esse link é pra dar errado](/notes/FESiará.md) <br/>
