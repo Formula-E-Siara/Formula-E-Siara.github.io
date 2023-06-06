@@ -1,3 +1,12 @@
+---
+title: "Escolha de sensores"
+tags:
+- elétrica
+- telemetria
+weight: -5
+date: "2023-01-03"
+---
+
 OK
 - IMU MPU 9250, um nível acima do mais básico, MPU6050
 - GPS Ublox neo 6m / m8n

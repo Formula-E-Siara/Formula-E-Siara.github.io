@@ -8,4 +8,4 @@ This page doesn't get published!
 > 🔗 [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) <br/>
 > 🔗 [POST](content/templates/post.md) <br/>
 
-![](notes/images/obsidian-settings.png)
+![](obsidian-settings.png)

@@ -1,5 +1,5 @@
 ---
-title: "Estudo de Baterias"
+title: "Estudo de Baterias Substitutivas"
 tags:
 - elétrica
 weight: -5

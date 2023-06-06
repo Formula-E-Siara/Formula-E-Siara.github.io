@@ -11,36 +11,8 @@
             "id": "e3f3fef10512a863",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/private/private-note.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0d69b1a4f3d64ae1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Como Realizar Modificações.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c0e15914d7c10cf7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/images/obsidian-settings.png.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -117,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/private/private-note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/private/private-note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "content/private/private-note.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -180,43 +148,43 @@
   },
   "active": "e3f3fef10512a863",
   "lastOpenFiles": [
-    "content/templates/post.md",
-    "notes/images/obsidian-settings.png.md",
-    "content/private/private-note.md",
+    "content/notes/telemetria/Simulador.md",
+    "content/images/github-actions.png",
+    "content/images/github-pages.png",
+    "content/images/google-domains.png",
+    "content/images/obsidian-settings.png",
+    "content/images/tutorial_obsidian.png",
+    "content/images/tutorial_github-desktop-tut3.png",
+    "content/images/tutorial_github-desktop-tut2.png",
+    "content/images/tutorial_github-desktop-tut1.png",
+    "content/images/tutorial_github-desktop-setup-tutorial.png",
+    "content/images/esquema_direcao.jpg",
     "content/Como Realizar Modificações.md",
-    "README.md",
-    "CODE_OF_CONDUCT.md",
-    "content/notes/images/esquema_direcao.jpg",
-    "content/notes/telemetria/simulador.md",
-    "content/Página Inicial.md",
-    "content/FESiará.md",
-    "Pasted github-desktop-tut4.md",
-    "content/notes/elétrica/Baterias.md",
-    "notes/Dando errado.md",
-    "content/notes/elétrica/Balanceamento de Baterias.md",
-    "content/notes/elétrica/Direção.md",
-    "content/notes/elétrica/Escolha.md",
+    "Entire wiki.canvas",
+    "content/templates/post.md",
+    "content/private/README.md",
+    "content/private/CODE_OF_CONDUCT.md",
+    "notes/images/obsidian-settings.png.md",
     "content/notes/elétrica/Inversor de Frequência.md",
     "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
-    "content/Sem título.md",
     "content/notes/elétrica/Escolha de sensores.md",
+    "content/notes/elétrica/Direção.md",
     "content/notes/elétrica/Controle manual à distância.md",
     "content/notes/elétrica/CANopen.md",
     "content/notes/elétrica/Battery Managment System.md",
-    "content/images/github-tutorial-3.png",
-    "content/images/github-tutorial-2.png",
-    "content/images/github-tutorial-1.png",
-    "screenshot.png",
+    "content/notes/elétrica/Baterias.md",
+    "content/notes/elétrica/Balanceamento de Baterias.md",
+    "content/FESiará.md",
+    "content/Página Inicial.md",
+    "content/private/private-note.md",
+    "Pasted github-desktop-tut4.md",
+    "notes/Dando errado.md",
+    "content/notes/elétrica/Escolha.md",
+    "content/Sem título.md",
     "Pasted github-tutorial-4.png.md",
-    "content/notes/images/github-desktop-tut4.png",
-    "content/images/github-tutorial-4.png",
-    "content/images/Pasted image 20230426145114.png",
-    "Pasted image 20230426145114.png",
-    "Pasted image 20230426145104.png",
     "notes/images",
     "notes",
     "content/notes/elétrica/Baterias de Chumbo-Ácido.md",
-    "Entire wiki.canvas",
     "content/notes/elétrica/Baterias em Série.md",
     "Untitled 1.canvas"
   ]

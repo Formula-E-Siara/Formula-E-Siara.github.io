@@ -17,11 +17,11 @@ Além do acesso ao GitHub pelo navegador, torna-se necessário a instalação do
 
 Após [baixar o GitHub Desktop](https://desktop.github.com/), é necessário realizar a clonagem do repositório:
 
-![](notes/images/github-desktop-tut1.png)
+![](tutorial_github-desktop-tut1.png)
 
-![](notes/images/github-desktop-tut2.png)
+![](tutorial_github-desktop-tut2.png)
 
-![](notes/images/github-desktop-tut3.png)
+![](tutorial_github-desktop-tut3.png)
 
 # [Obsidian](http://obsidian.md)
 
@@ -29,7 +29,7 @@ Obsidian é a melhor forma de realizar alterações na Wiki, por já podermos te
 
 Após [baixar e instalar o Obsidian](https://obsidian.md/download), basta abrir um _vault_ na mesma pasta donde o repositório foi clonado, com essa opção:
 
-![](notes/images/github-desktop-tut4.png)
+![](tutorial_obsidian.png)
 
 Com isso, a estrutura da wiki estará de livre alteração. Tome cuidado e não faça besteiras! 😀
 

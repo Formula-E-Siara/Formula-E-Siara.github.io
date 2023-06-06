@@ -1,4 +1,13 @@
-Para controle do carro no simulador ou mesmo fisicamente, existe a opção de usar um controle especializado, como os drones possuem, entretando, havendo boa infraestrutura de telemetria podemos usar alguns controles mais simples como teclado ou mesmo um gamepad, havendo confiabilidade e mecanismos de segurança. Nesse sentido temos o módulo `ds4input` que recebe entrada de um controle de PS4 e transmite via tópicos do ROS para controle do carro. 
+---
+title: "Controle manual à distância"
+tags:
+- elétrica
+- sensoriamento
+weight: -5
+date: "2023-01-03"
+---
+
+Para controle do carro no simulador ou mesmo fisicamente, existe a opção de usar um controle especializado, como os drones possuem, entretanto, havendo boa infraestrutura de telemetria podemos usar alguns controles mais simples como teclado ou mesmo um gamepad, havendo confiabilidade e mecanismos de segurança. Nesse sentido temos o módulo `ds4input` que recebe entrada de um controle de PS4 e transmite via tópicos do ROS para controle do carro. 
 
 No momento faça: `ros2 run ds4input main`
 

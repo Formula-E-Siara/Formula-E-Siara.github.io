@@ -9,7 +9,7 @@ date: "2023-04-26"
 
 Decidimos por usar um simulador quase de acordo com as necessidades do projeto. Usamos uma versão modificada do simulador da equipe de Formula da Universidade de Edimburgo. 
 
-<a href="https://github.com/Formula-E-Siara/simulador">SIMULADOR</a>
+<a href="https://github.com/Formula-E-Siara/simulador">Simulador</a>
 
 ## Como instalar o simulador
 Infelizmente somente funciona em linux, algumas dependências do simulador são do linux apesar da possibilidade de usar o ROS no Windows. No entanto, é possível usar o WSL ou o VirtualBox.
