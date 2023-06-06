@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b51614f60b499cc4",
+        "id": "e828c8e4696b82aa",
         "type": "tabs",
         "children": [
           {
-            "id": "da02c39a55dc5ffe",
+            "id": "10fce23ac5bee688",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -62,6 +62,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "5def80b5c708337c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -146,12 +154,21 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "da02c39a55dc5ffe",
+  "active": "10fce23ac5bee688",
   "lastOpenFiles": [
+    "Pasted github-desktop-tut4.md",
+    "content/notes/comorealizarmodificações.md",
+    "content/notes/FESiará.md",
+    "content/images/github-tutorial-3.png",
+    "content/images/github-tutorial-2.png",
+    "content/images/github-tutorial-1.png",
+    "screenshot.png",
+    "Pasted github-tutorial-4.png.md",
+    "content/notes/images/github-desktop-tut4.png",
+    "content/images/github-tutorial-4.png",
+    "content/images/Pasted image 20230426145114.png",
     "Pasted image 20230426145114.png",
     "Pasted image 20230426145104.png",
-    "content/notes/FESiará.md",
-    "content/notes/comorealizarmodificações.md",
     "notes/images/obsidian-settings.png.md",
     "notes/images",
     "notes",
