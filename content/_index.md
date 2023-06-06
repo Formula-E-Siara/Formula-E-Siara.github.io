@@ -12,4 +12,4 @@ Objetivos:
 ## Participe agora mesmo!
 > 🌎 [Página Inicial Fórmula-E Siará](FESiará.md) <br/>
 > 📚 ["Como realizar modificações na Wiki?"](comorealizarmodificações.md) <br/>
-> 💢  [Esse link é pra dar errado](/notes/FESiará.md) <br/>
+> 💢  [Esse link é pra dar errado](Dando%20errado.md) <br/>
