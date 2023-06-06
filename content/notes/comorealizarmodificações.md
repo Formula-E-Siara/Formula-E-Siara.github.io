@@ -28,7 +28,9 @@ Após [baixar o GitHub Desktop](https://desktop.github.com/), é necessário rea
 Obsidian é a melhor forma de realizar alterações na Wiki, por já podermos ter uma prévia de como a página se tornará. Entretanto, se você estiver se sentindo **valente** pode até mesmo realizar as modificações nos arquivos ```.md``` pelo navegador ou Notepad.
 
 Após [baixar e instalar o Obsidian](https://obsidian.md/download), basta abrir um _vault_ na mesma pasta donde o repositório foi clonado, com essa opção:
+
 ![](notes/images/github-desktop-tut4.png)
+
 Com isso, a estrutura da wiki estará de livre alteração. Tome cuidado e não faça besteiras! 😀
 
 
