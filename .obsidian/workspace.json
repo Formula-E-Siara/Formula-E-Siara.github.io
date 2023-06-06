@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/FESiará.md",
+                "file": "content/private/private-note.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/notes/telemetria/simulador.md",
+                "file": "content/Como Realizar Modificações.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c0e15914d7c10cf7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/images/obsidian-settings.png.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/FESiará.md",
+                "file": "content/private/private-note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/FESiará.md",
+                "file": "content/private/private-note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/FESiará.md"
+                "file": "content/private/private-note.md"
               }
             }
           }
@@ -168,26 +180,29 @@
   },
   "active": "e3f3fef10512a863",
   "lastOpenFiles": [
+    "content/templates/post.md",
+    "notes/images/obsidian-settings.png.md",
+    "content/private/private-note.md",
+    "content/Como Realizar Modificações.md",
+    "README.md",
+    "CODE_OF_CONDUCT.md",
+    "content/notes/images/esquema_direcao.jpg",
+    "content/notes/telemetria/simulador.md",
+    "content/Página Inicial.md",
+    "content/FESiará.md",
+    "Pasted github-desktop-tut4.md",
     "content/notes/elétrica/Baterias.md",
+    "notes/Dando errado.md",
     "content/notes/elétrica/Balanceamento de Baterias.md",
+    "content/notes/elétrica/Direção.md",
     "content/notes/elétrica/Escolha.md",
     "content/notes/elétrica/Inversor de Frequência.md",
-    "content/FESiará.md",
-    "content/_index.md",
     "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
-    "content/comorealizarmodificações.md",
-    "content/notes/telemetria/simulador.md",
     "content/Sem título.md",
     "content/notes/elétrica/Escolha de sensores.md",
-    "notes/Dando errado.md",
-    "content/notes/elétrica/Direção.md",
     "content/notes/elétrica/Controle manual à distância.md",
     "content/notes/elétrica/CANopen.md",
     "content/notes/elétrica/Battery Managment System.md",
-    "content/private/private-note.md",
-    "CODE_OF_CONDUCT.md",
-    "README.md",
-    "Pasted github-desktop-tut4.md",
     "content/images/github-tutorial-3.png",
     "content/images/github-tutorial-2.png",
     "content/images/github-tutorial-1.png",
@@ -198,13 +213,11 @@
     "content/images/Pasted image 20230426145114.png",
     "Pasted image 20230426145114.png",
     "Pasted image 20230426145104.png",
-    "notes/images/obsidian-settings.png.md",
     "notes/images",
     "notes",
     "content/notes/elétrica/Baterias de Chumbo-Ácido.md",
     "Entire wiki.canvas",
     "content/notes/elétrica/Baterias em Série.md",
-    "content/notes/elétrica/Baterias Possíveis.md",
     "Untitled 1.canvas"
   ]
 }

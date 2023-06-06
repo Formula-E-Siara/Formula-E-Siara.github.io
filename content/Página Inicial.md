@@ -1,5 +1,5 @@
 ---
-title: "Fórmula-E Siará Wiki"
+title: "Página inicial"
 ---
 
 Tentativa de criar uma [Knowledge Base](https://pt.wikipedia.org/wiki/Base_de_conhecimento) para o projeto Fórmula-E Siará da Universidade Federal do Ceará.
@@ -11,4 +11,4 @@ Objetivos:
 
 ## Participe agora mesmo!
 > 🌎 [Página Inicial Fórmula-E Siará](FESiará.md) <br/>
-> 📚 ["Como realizar modificações na Wiki?"](comorealizarmodificações.md) <br/>
+> 📚 ["Como realizar modificações na Wiki?"](Como%20Realizar%20Modificações.md) <br/>

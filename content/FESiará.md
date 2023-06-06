@@ -1,5 +1,5 @@
 ---
-title: "Página Inicial"
+title: "Fórmula-E Siará Wiki"
 permalink: /start
 ---
 
@@ -31,7 +31,7 @@ O [Inversor de Frequência](notes/elétrica/Inversor%20de%20Frequência) é o di
 
 #### Baterias
 
-O módulo de baterias é responsável por monitorar e proteger o pacote de baterias que alimenta o motor elétrico. O pacote é composto por 120 células de íons de lítio, conectadas em série e paralelo, que fornecem uma tensão nominal de 400 V e uma capacidade de 15 Ah[3](https://blog.kalatec.com.br/inversor-de-frequencia/). O módulo de baterias mede a tensão, a corrente e a temperatura de cada célula, além do estado de carga (SOC) e do estado de saúde (SOH) do pacote. O módulo também controla os relés e os fusíveis que isolam o pacote da rede elétrica do veículo em caso de falha ou emergência. O módulo ainda envia dados para o sistema de telemetria e para o inversor de frequência, que usa essas informações para otimizar o controle do motor.
+O módulo de [baterias](notes/elétrica/Baterias) é responsável por monitorar e proteger o pacote de baterias que alimenta o motor elétrico. O pacote é composto por 120 células de íons de lítio, conectadas em série e paralelo, que fornecem uma tensão nominal de 400 V e uma capacidade de 15 Ah \[[4.1](https://blog.kalatec.com.br/inversor-de-frequencia/))]. O módulo de baterias mede a tensão, a corrente e a temperatura de cada célula, além do estado de carga (SOC) e do estado de saúde (SOH) do pacote. O módulo também controla os relés e os fusíveis que isolam o pacote da rede elétrica do veículo em caso de falha ou emergência. O módulo ainda envia dados para o sistema de telemetria e para o inversor de frequência, que usa essas informações para otimizar o controle do motor.
 
 
 ### Eletrônica
@@ -40,7 +40,7 @@ A eletrônica é o conjunto de circuitos e componentes que gerenciam e controlam
 
 #### Direção
 
-O módulo de direção é responsável por controlar o sistema de direção elétrica assistida (EPS), que auxilia o piloto na condução do veículo. O EPS consiste em um motor elétrico acoplado à coluna de direção, que aplica um torque proporcional à força exercida pelo piloto no volante. O módulo de direção recebe o sinal do sensor de torque no volante e envia um comando para o motor do EPS, ajustando o nível de assistência conforme a velocidade do veículo. O módulo também monitora a temperatura e a corrente do motor do EPS, além de enviar dados para o sistema de telemetria.
+O módulo de [direção elétrica](notes/elétrica/Direção) é responsável por controlar o sistema de direção elétrica assistida (EPS), que auxilia o piloto na condução do veículo. O EPS consiste em um motor elétrico acoplado à coluna de direção, que aplica um torque proporcional à força exercida pelo piloto no volante. O módulo de direção recebe o sinal do sensor de torque no volante e envia um comando para o motor do EPS, ajustando o nível de assistência conforme a velocidade do veículo. O módulo também monitora a temperatura e a corrente do motor do EPS, além de enviar dados para o sistema de telemetria.
 
 ### Telemetria
 
@@ -53,10 +53,12 @@ Para o sensor de RPM a melhor solução é fazer como em carros comerciais, usan
 Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o protocolo CAN, assim como é feito em modelos comerciais e carros de maior porte. Será um sistema híbrido com vários controladores e sensores, independentes, mas trabalhando em conjunto com o computador principal, o qual processa vídeo e envia dados para a telemetria.
 
 
-## Veja também sobre:
-> 🔗[Escolha de sensores](notes/elétrica/Escolha%20de%20sensores.md)<br/>
-> 🔗 [Simulador](simulador.md) <br/>
-> 🔗  [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância)<br/>
+
+>[!INFO] Veja também sobre:
+> 🔗[Escolha de sensores](notes/elétrica/Escolha%20de%20sensores.md)
+> 🔗 [Simulador](simulador.md)
+> 🔗  [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância)
+> 
 
 
 
