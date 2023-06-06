@@ -11,8 +11,12 @@
             "id": "e3f3fef10512a863",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "content/FESiará.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/FESiará.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "content/FESiará.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "content/FESiará.md"
+              }
             }
           }
         ]
@@ -149,6 +157,9 @@
   "active": "e3f3fef10512a863",
   "lastOpenFiles": [
     "content/notes/telemetria/Simulador.md",
+    "content/FESiará.md",
+    "content/Página Inicial.md",
+    "content/Como Realizar Modificações.md",
     "content/images/github-actions.png",
     "content/images/github-pages.png",
     "content/images/google-domains.png",
@@ -159,7 +170,6 @@
     "content/images/tutorial_github-desktop-tut1.png",
     "content/images/tutorial_github-desktop-setup-tutorial.png",
     "content/images/esquema_direcao.jpg",
-    "content/Como Realizar Modificações.md",
     "Entire wiki.canvas",
     "content/templates/post.md",
     "content/private/README.md",
@@ -174,8 +184,6 @@
     "content/notes/elétrica/Battery Managment System.md",
     "content/notes/elétrica/Baterias.md",
     "content/notes/elétrica/Balanceamento de Baterias.md",
-    "content/FESiará.md",
-    "content/Página Inicial.md",
     "content/private/private-note.md",
     "Pasted github-desktop-tut4.md",
     "notes/Dando errado.md",

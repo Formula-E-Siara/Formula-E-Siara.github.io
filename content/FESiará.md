@@ -55,10 +55,12 @@ Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o pr
 
 
 >[!INFO] Veja também sobre:
+>
 > 🔗[Escolha de sensores](notes/elétrica/Escolha%20de%20sensores.md) <br/>
-> 🔗 [Simulador](Simulador.md) <br/>
+> 🔗 [Simulador](content/notes/telemetria/Simulador.md) <br/>
 > 🔗  [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância) <br/>
 
 
 
 
+l
