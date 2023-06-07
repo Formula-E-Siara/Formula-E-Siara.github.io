@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/FESiará.md",
+                "file": "content/notes/telemetria/Simulador.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/FESiará.md",
+                "file": "content/notes/telemetria/Simulador.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/FESiará.md",
+                "file": "content/notes/telemetria/Simulador.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/FESiará.md"
+                "file": "content/notes/telemetria/Simulador.md"
               }
             }
           }
@@ -168,15 +168,15 @@
   },
   "active": "e3f3fef10512a863",
   "lastOpenFiles": [
+    "content/notes/telemetria/Simulador.md",
+    "content/FESiará.md",
     "content/_index.md",
     "content/Como Realizar Modificações.md",
-    "content/FESiará.md",
     "content/notes/elétrica/Inversor de Frequência.md",
     "content/notes/elétrica/CANopen.md",
     "content/notes/elétrica/Escolha de sensores.md",
     "content/notes/elétrica/Baterias.md",
     "content/notes/elétrica/Battery Managment System.md",
-    "content/notes/telemetria/Simulador.md",
     "content/images/github-actions.png",
     "content/images/github-pages.png",
     "content/images/google-domains.png",
