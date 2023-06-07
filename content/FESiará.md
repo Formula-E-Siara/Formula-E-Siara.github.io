@@ -3,9 +3,8 @@ title: "Fórmula-E Siará Wiki"
 permalink: /start
 ---
 
-```
-Então, você quer saber mais sobre o Fórmula-E Siará?
-```
+> Então, você quer saber mais sobre o Fórmula-E Siará?
+
 
 Nossa equipe é formada por alunos de diferentes cursos de engenharia e áreas afins, que trabalham em conjunto para criar um carro inovador, eficiente e competitivo.
 
@@ -59,7 +58,7 @@ Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o pr
 >[!INFO] Veja também sobre:
 >
 > 🔗[Escolha de sensores](notes/elétrica/Escolha%20de%20sensores.md) <br/>
-> 🔗 [Simulador](content/notes/telemetria/Simulador.md) <br/>
+> 🔗 [Simulador](notes/telemetria/Simulador.md) <br/>
 > 🔗  [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância) <br/>
 
 
