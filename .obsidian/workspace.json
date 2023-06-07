@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/notes/telemetria/Simulador.md",
+                "file": "content/FESiará.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/notes/telemetria/Simulador.md",
+                "file": "content/FESiará.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/notes/telemetria/Simulador.md",
+                "file": "content/FESiará.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/notes/telemetria/Simulador.md"
+                "file": "content/FESiará.md"
               }
             }
           }
