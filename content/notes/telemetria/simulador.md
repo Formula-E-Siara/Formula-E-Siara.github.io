@@ -7,9 +7,7 @@ weight: -5
 date: "2023-04-26"
 ---
 
-Decidimos por usar um simulador quase de acordo com as necessidades do projeto. Usamos uma versão modificada do simulador da equipe de Formula da Universidade de Edimburgo. 
-
-<a href="https://github.com/Formula-E-Siara/simulador">Simulador</a>
+Decidimos por usar um simulador quase de acordo com as necessidades do projeto. Usamos uma versão modificada do simulador da equipe de Formula da Universidade de Edimburgo. Em caso de dúvidas, sinta-se convidado(a) a enviar criar uma issue no github.
 
 ## Como instalar o simulador
 Infelizmente somente funciona em linux, algumas dependências do simulador são do linux apesar da possibilidade de usar o ROS no Windows. No entanto, é possível usar o WSL ou o VirtualBox.
@@ -31,7 +29,11 @@ sudo apt install lsb-core lsb-release -y
 ```
 Serve para que o script do ROS detecte a versão correta do Ubuntu, isso realmente deu uma vez erro e consumiu muito tempo. 
 
-Em seguida vá na página do <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS Humble</a>, seguindo os passos tudo deve funcionar normalmente. Quando for fazer o `sudo apt install ros-humble-desktop`, não faça, faça isso: `sudo apt install ros-humble-desktop`, para instalar todos os pacotes. Ainda vai faltar, então instale esses pacotes:
+Em seguida vá na página do <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS Humble</a>, seguindo os passos tudo deve funcionar normalmente. Quando for fazer o `sudo apt install ros-humble-desktop`, não faça, faça isso: `sudo apt install ros-humble-desktop`, para instalar todos os pacotes. Ainda vai faltar, então faça isso:
+```
+sudo apt install ros-humble-desktop-full
+```
+e depois instale esses pacotes:
 ```
 sudo apt install ros-humble-gazebo-ros ros-humble-ackermann-msgs
 ```
@@ -44,17 +46,19 @@ sudo apt install python3 python3-pip
 ```
 
 Faça:
+(Obs.: não coloque o simulador numa pasta cujo nome tenha acentos ou espaços como, ex.: Zé Maria, isso impede que o seu terminal encontre a pasta de onde instalar os pacotes)
 ```
-# criamos a pasta do simulador
 cd ~/
 
-# efetivamente fazendo o download dele
+# efetivamente fazemos o download dele
 git clone https://github.com/Formula-E-Siara/simulador
-```
 
-Após isso executamos os comandos, mas cuidado, coloque direito para não ter que editar o arquivo do seu bash, dentro da pasta do simulador você pode dar um `pwd` e ver o diretório absoluto. No meu caso, geralmente seria `/home/gusta/simulador`, no seu caso vai ser: `/home/USUARIO/simulador` substituindo pelo seu nome
-```
-echo 'export EUFS_MASTER=(caminho absoluto da pasta do simulador)' >> ~/.bashrc
+# entre no diretório
+cd simulador
+
+
+echo 'export EUFS_MASTER=$(pwd)' >> ~/.bashrc
+
 source ~/.bashrc
 ```
 
