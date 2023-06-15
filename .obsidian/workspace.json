@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Direção.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c24768943a320d57",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "rascunho.md",
+                "file": "content/Como Realizar Modificações.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "rascunho.md",
+                "file": "content/Como Realizar Modificações.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "rascunho.md",
+                "file": "content/Como Realizar Modificações.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "rascunho.md"
+                "file": "content/Como Realizar Modificações.md"
               }
             }
           }
@@ -167,12 +154,12 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "c24768943a320d57",
+  "active": "4ff0a408c12e5850",
   "lastOpenFiles": [
-    "content/Direção.md",
+    "content/notes/elétrica/Direção.md",
+    "content/Como Realizar Modificações.md",
     "rascunho.md",
     "content/FESiará.md",
-    "content/Como Realizar Modificações.md",
     "content/notes/telemetria/simulador.md",
     "content/notes/elétrica/Inversor de Frequência.md",
     "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
