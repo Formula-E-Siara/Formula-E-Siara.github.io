@@ -12,3 +12,4 @@ Objetivos:
 ## Participe agora mesmo!
 > 🌎 [Página Inicial Fórmula-E Siará](FESiará.md) <br/>
 > 📚 ["Como realizar modificações na Wiki?"](Como%20Realizar%20Modificações.md) <br/>
+> <3 ["ASDSADASDSAD"](notes/elétrica/rascunho.md) <br/>

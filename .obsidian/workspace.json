@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Como Realizar Modificações.md",
+                "file": "content/notes/elétrica/rascunho.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Como Realizar Modificações.md",
+                "file": "content/notes/elétrica/rascunho.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Como Realizar Modificações.md",
+                "file": "content/notes/elétrica/rascunho.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Como Realizar Modificações.md"
+                "file": "content/notes/elétrica/rascunho.md"
               }
             }
           }
@@ -156,44 +156,43 @@
   },
   "active": "4ff0a408c12e5850",
   "lastOpenFiles": [
+    "content/_index.md",
+    "Entire wiki.canvas",
+    "content/notes/elétrica/rascunho.md",
     "content/notes/elétrica/Direção.md",
-    "content/Como Realizar Modificações.md",
-    "rascunho.md",
-    "content/FESiará.md",
-    "content/notes/telemetria/simulador.md",
-    "content/notes/elétrica/Inversor de Frequência.md",
-    "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
-    "content/notes/elétrica/Escolha de sensores.md",
-    "content/notes/elétrica/Controle manual à distância.md",
-    "content/notes/elétrica/CANopen.md",
     "content/notes/elétrica/Battery Managment System.md",
+    "content/notes/elétrica/Inversor de Frequência.md",
+    "[Uso.md",
+    "content/private/screenshot.png",
+    "content/notes/Como Realizar Modificações.md",
+    "content/notes/telemetria/simulador.md",
+    "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
     "content/notes/elétrica/Baterias.md",
     "content/notes/elétrica/Balanceamento de Baterias.md",
-    "content/images/direcao_motor_driver.png",
-    "content/images/Arduino_WiFi2.png",
-    "content/images/direcao_app1_example.jpg",
-    "content/images/direcao_CAN.png",
-    "content/images/Arduino_WiFi.png",
-    "content/images/direcao_KA7805.png",
-    "content/_index.md",
-    "content/images/direcao_CAN7.png",
-    "content/images/direcao_CAN4.png",
-    "[Uso.md",
-    "content/images/direcao_pinout_attach.png",
-    "content/images/direcao_teste_encoder3.jpg",
+    "content/notes/elétrica/CANopen.md",
+    "content/notes/elétrica/Controle manual à distância.md",
+    "content/notes/elétrica/Escolha de sensores.md",
+    "content/notes/FESiará.md",
+    "content/notes/images/direcao_motor_driver.png",
+    "content/notes/images/Arduino_WiFi2.png",
+    "content/notes/images/direcao_app1_example.jpg",
+    "content/notes/images/direcao_CAN.png",
+    "content/notes/images/Arduino_WiFi.png",
+    "content/notes/images/direcao_KA7805.png",
+    "content/notes/images/direcao_CAN7.png",
+    "content/notes/images/direcao_CAN4.png",
+    "content/notes/images/direcao_pinout_attach.png",
     "content/images/direcao_soft_HSS86_2.png.md",
     "2023-06-14.md",
     "content/images/direcao_KA7805.png.~tmp",
     "content/images/motor.md",
     "content/notes/telemetria/Simulador.md",
-    "Entire wiki.canvas",
     "content/templates/post.md",
     "content/private/README.md",
     "content/private/CODE_OF_CONDUCT.md",
     "notes/images/obsidian-settings.png.md",
     "content/private/private-note.md",
     "Pasted github-desktop-tut4.md",
-    "notes/Dando errado.md",
     "notes/images",
     "notes",
     "Untitled 1.canvas"
