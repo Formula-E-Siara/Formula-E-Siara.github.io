@@ -9,24 +9,24 @@ date: "2022-01-03"
 
 ### 1.1.2. Fios encoder motor
 
-![](direcao_db15_cores.png)
+![](notes/images/direcao_db15_cores.png)
 
 ### 1.1.3. Conexão encoder com driver HSS86
 
-![](direcao_conexao_encoder_hss86.png)
+![](notes/images/direcao_conexao_encoder_hss86.png)
 
  
 ## 1.2. Hybrid Servo Driver (TMA DES HSS86)
 
 ### 1.2.1. Luz segurança
 
-![](direcao_luz_seg_hss86.png)
+![](notes/images/direcao_luz_seg_hss86.png)
 
 ### 1.2.2. Configuração dos switches
 
 Usaremos configuração default. Para acionamento do motor não precisa tanta precisão
 
-![](direcao_microstep.png)
+![](notes/images/direcao_microstep.png)
 
 ou seja, todas as chaves devem ficar em on
 
@@ -36,7 +36,7 @@ ou seja, todas as chaves devem ficar em on
 
 Estaremos usando o arduino que tem tensão de sinal de 5V logo não precisa dos resistores conforme tabela abaixo. Para teste com esp (próximo tópico), usaremos um optacoplador ligado aos pinos de saída, assim escolhemos a resistência de 2,2k pois usaremos 24V para dar maior margem para caso haja queda de tensão (checar diagrama 1.1.1.)
 
-![](direcao_pinos_controle_hss86.png)
+![](notes/images/direcao_pinos_controle_hss86.png)
 
 #### Pinos (HSS86)
 -       ENA (Enable): HIGH habilita o motor (considerando acionamento em HIGH conforme diagrama do datasheet do HSS86)
@@ -118,14 +118,14 @@ void loop(){
 
 #### Error
 
-![](direcao_error.png)
+![](notes/images/direcao_error.png)
 ## 1.3. Controlando por celular
 
 Celular(bluetooth) → ESP → optoacoplador → driver HSS86
 
 ### 1.3.1. ESP (portas BT)
 
-![](direcao_pinout_esp32.png)
+![](notes/images/direcao_pinout_esp32.png)
 ### 1.3.2. (Saída ESP)
 
 Necessário entre esp e driver pq saída esp é de 3,3V
@@ -133,27 +133,27 @@ Necessário entre esp e driver pq saída esp é de 3,3V
 #### Optacoplador TLP281-4
 
 Prático 4 entradas -> 4 saídas
-![](direcao_TLP281_4.png)
+![](notes/images/direcao_TLP281_4.png)
 
-![](direcao_TLP281-4_esquema.png)
+![](notes/images/direcao_TLP281-4_esquema.png)
 
 #### Conversor de Nível Lógico 3.3V-5V Bidirecional - 2 Canais
 
 Sugestão do professor, mas não achamos no lab
 
-![](direcao_conversor_nivel_logico.png)
+![](notes/images/direcao_conversor_nivel_logico.png)
 
 #### Optacoplador HCPL-3120
 
 tinhamos sobrando no lab
 
-![](direcao_HCPL_3120.png)
+![](notes/images/direcao_HCPL_3120.png)
 
 >[!attention] É necessário uso de um capacitor de bypass de 0,1 μF entre os pinos 5 e 8
 
 Por datasheet do opta, temos:
 
-![](direcao_HCPL_3120_datasheet.png)
+![](notes/images/direcao_HCPL_3120_datasheet.png)
 
 ##### Input
 
@@ -163,7 +163,7 @@ A tensão de entrada será da ESP32 que é de 3,3V, então o resistor de entrada
 
 >[!attention] É necessário se atentar à necessidade de resistência entre o controlador e o driver de acordo com a tensão de controle utilizada.
 Pelo datasheet, temos:
-![](direcao_resistencia_hss86.png)
+![](notes/images/direcao_resistencia_hss86.png)
 
 Usaremos alimentação de saída em 24V (tem q estar entre 15 e 30V e o datasheet do hss dá opção de 5V, 12V e 24V). Assim, lembrando pelo diagrama 1.1.1. e tabela 1.2.3. precisamos usar resistência de aproximamente 2k, usaremos 2k2 Ω
 
@@ -173,19 +173,19 @@ A alimentação da esp pode ser feita pelo próprio conector USB (5,0V) ou entã
 
 #### Regulador KA7805
 
-![](direcao_KA7805.png)
+![](notes/images/direcao_KA7805.png)
 
-![](direcao_KA7805_data1.png)
+![](notes/images/direcao_KA7805_data1.png)
 
-![](direcao_KA7805_data2.png)
+![](notes/images/direcao_KA7805_data2.png)
 
 ### 1.3.5. Aplicativo para controlar pelo celular
 
 #### Aplicativo 1: Só terminal Serial
 
-![](direcao_app1.jpg)
+![](notes/images/direcao_app1.jpg)
 
-![](direcao_app1_example.jpg)
+![](notes/images/direcao_app1_example.jpg)
 
 ##### Código acionamento (v1)
 
@@ -669,9 +669,9 @@ void loop(){
 
 #### Aplicativo 2: Controle remoto
 
-![](direcao_app2.png)
+![](notes/images/direcao_app2.png)
 
-![](direcao_app2_comandos.png)
+![](notes/images/direcao_app2_comandos.png)
 
 Usaremos:
 -       L (left)
@@ -870,15 +870,15 @@ void loop(){
 
 ### 2.1.1. Phantom 4
 
-![](direcao_phantom4.png)
+![](notes/images/direcao_phantom4.png)
 
 O controle remoto do Phantom 4 utiliza uma tecnologia de comunicação proprietária da DJI, chamada de Lightbridge, que não é diretamente compatível com microcontroladores convencionais, como o Arduino
 
 ### 2.1.2. Arduino + módulo WiFi
 
-![](Arduino_WiFi.png)
+![](notes/images/Arduino_WiFi.png)
 
-![](Arduino_WiFi2.png)
+![](notes/images/Arduino_WiFi2.png)
 
 ### 2.1.3. ESP para Raspberry (SPI)
 
@@ -890,29 +890,29 @@ Na comunicação serial síncrona introduzimos o conceito de mestre - escravo (c
 
 Além disso, os barramentos são unidirecionais, ou seja, os sinais são definidos somente como enviado ou somente como recebido. Mas é possível envio e recebimento de sinal de forma simultânea (por barramentos diferentes)
 
-![](direcao_SPI.png)
+![](notes/images/direcao_SPI.png)
 
-![](direcao_SPI2.png)
+![](notes/images/direcao_SPI2.png)
 
 Possível atingir velocidades maiores de comunicação porque há pouca deformação do sinal utilizando dois canais separados
 
 ##### Exemplo ligação
 
-![](direcao_SPI3.png)
+![](notes/images/direcao_SPI3.png)
 
 No SS, o dispositivo é selecionado quando este pino se encontra em nível baixo
 MISO: serial data out (SDO)
 MOSI: serial data in (SDI)
 
-![](direcao_SPI4.png)
+![](notes/images/direcao_SPI4.png)
 
-![](direcao_SPI5.png)
+![](notes/images/direcao_SPI5.png)
 
 #### ESP32 (portas spi)
 
-![](direcao_SPI6.png)
+![](notes/images/direcao_SPI6.png)
 
-![](direcao_SPI7.png)
+![](notes/images/direcao_SPI7.png)
 
 SP0 and SP1 are used internally to communicate with the built-in flash memory, and you should not use them for other tasks.
 
@@ -922,7 +922,7 @@ SP0 and SP1 are used internally to communicate with the built-in flash memory, a
 
 ##### Características gerais           
 
-![](direcao_CAN.png)
+![](notes/images/direcao_CAN.png)
 
 Protocolo CAN (Controller Area Network) é um protocolo de comunicação serial simultânea:
 -       transmite dados a uma taxa de até 1 Mbps em barramentos de até 40 metros;
@@ -935,7 +935,7 @@ Protocolo CAN (Controller Area Network) é um protocolo de comunicação serial 
 -       Protocolo regulado: ISO 11898
 -       A velocidade de transmissão dos dados é proporcional ao comprimento do barramento;
 
-![](direcao_CAN2.png)
+![](notes/images/direcao_CAN2.png)
 
 O protocolo foi desenvolvido pela BOSCH
 
@@ -954,50 +954,50 @@ Para velocidades de comunicação acima de 250 kbit/s, é recomendado cabo em pa
 
 Os dados são representados por bits recessivos e dominantes. O bit zero é dominante.  Após enviar um bit, cada módulo analisa o barramento e verifica se outro módulo na rede o sobrescreveu.
 
-![](direcao_CAN3.png)
+![](notes/images/direcao_CAN3.png)
 
 ##### Formatos de mensagem:
 
 -       CAN 2.0A (padrão): Mensagens com identificador de 11 bits, até 2048 mensagens
 
-![](direcao_CAN4.png)
+![](notes/images/direcao_CAN4.png)
 
-![](direcao_CAN5.png)
+![](notes/images/direcao_CAN5.png)
 
 -       CAN 2.0B (estendido): identificador de 29 bits, até  5,3*10⁶ de mensagens, entretanto há aumento no tempo de transmissão de cada mensagem
 
-![](direcao_CAN6.png)
+![](notes/images/direcao_CAN6.png)
 
-![](direcao_CAN7.png)
+![](notes/images/direcao_CAN7.png)
 
 ##### Tipos de mensagens:
 
 -       Frame de Dados: Contém os dados do emissor para o(s) receptor(es);
 
-![](direcao_CAN8.png)
+![](notes/images/direcao_CAN8.png)
 
 -       Frame Remota: É uma solicitação de dados partindo de um dos nós;
 
-![](direcao_CAN9.png)
+![](notes/images/direcao_CAN9.png)
 
 -       Frame de Erro: É um frame enviado por qualquer um dos nós ao identificar um erro no barramento e pode ser detectado por todos os nós;
 
-![](direcao_CAN10.png)
+![](notes/images/direcao_CAN10.png)
 -       Frame de sobrecarga: Serve para retardar o tráfego no barramento devido à sobrecarga de dados ou atraso em um ou mais nós.
 
-![](direcao_CAN11.png)
+![](notes/images/direcao_CAN11.png)
 
 ##### Transceiver (MCP2515 -  Controlador CAN Stand-Alone com Interface SPI)
 
-![](direcao_MCP2515.png)
+![](notes/images/direcao_MCP2515.png)
 
 Por que usar MCP2515 se a ESP32 ja tem uma porta CAN interna? Existem aplicações que requerem mais de uma porta CAN, e o único recurso do ESP32 aplicável para isso é a interface SPI. Na verdade, hipoteticamente, você pode adicionar até seis portas CAN controladas por SPI ao ESP32
 
-![](direcao_MCP2515_pinout.png)
+![](notes/images/direcao_MCP2515_pinout.png)
 
 # 3. Encoder
 
-![](direcao_encoder.png)
+![](notes/images/direcao_encoder.png)
 
 ## 3.1. Possibilidades
 
@@ -1007,23 +1007,23 @@ Por que usar MCP2515 se a ESP32 ja tem uma porta CAN interna? Existem aplicaçõ
 
 teria que fazer uma redução com faixas escuras delimitadas para leitura por esse sensor. Ele envia luz e atua conforme a reflexão dela dada a sua reflexão.
 
-![](direcao_encoder2.png)
+![](notes/images/direcao_encoder2.png)
 
 Funciona como um amplificador. Mudando as resistências, altera a faixa que ele considera alta(3,3V) e baixa(0V). Assim, alteramos a sensibilidade do sensor (luz)
 
-![](direcao_encoder3.png)
+![](notes/images/direcao_encoder3.png)
 
 ### 3.1.2. Software HSS86
 
 (Pegar dos dados a partir do driver HSS86)
 
-![](direcao_soft_HSS86.png)
+![](notes/images/direcao_soft_HSS86.png)
 
-![](direcao_soft_HSS86_2.png)
+![](notes/images/direcao_soft_HSS86_2.png)
 
-![](direcao_soft_HSS86_3.png)
+![](notes/images/direcao_soft_HSS86_3.png)
 
-![](direcao_soft_HSS86_4.png)
+![](notes/images/direcao_soft_HSS86_4.png)
 
 ### 3.1.3. Encoder do próprio motor
 
@@ -1031,18 +1031,18 @@ Funciona como um amplificador. Mudando as resistências, altera a faixa que ele 
 
 Testes para p=1000us, pelo osciloscópio temos que o período do motor equivale a 400us para essa aplicação.
 
-![](direcao_teste_encoder.jpg)
+![](notes/images/direcao_teste_encoder.jpg)
 Sinais ea+ e eb+ são defasados em 90 (sentido horário d1)
 
-![](direcao_teste_encoder2.jpg)
+![](notes/images/direcao_teste_encoder2.jpg)
 Sinais ea+ e eb+ são defasados em 90 (sentido anti horário d0)
 
-![](direcao_teste_encoder3.jpg)
+![](notes/images/direcao_teste_encoder3.jpg)
 Sinais ea+ e ea- são opostos
 
 #### ESP32 (AttachInterrupt)
 
-![](direcao_pinout_attach.png)
+![](notes/images/direcao_pinout_attach.png)
 
 função _attachInterrupt_, cujo protótipo é _attachInterrupt(GPIOPin, ISR, Mode)_. Onde:
 
