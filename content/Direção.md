@@ -9,6 +9,9 @@ date: "2023-01-03"
 
 >[!tip] Não repare a bagunça, esse tópico ainda ta sendo organizado . . ...🐌
 
+
+![](content/images/tutorial_github-desktop-tut1.png)
+
 # 1. Acionamento motor por BT (HSS86)
 
 ## 1.1. Motor de passo
