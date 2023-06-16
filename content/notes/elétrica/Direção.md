@@ -1053,6 +1053,10 @@ O pino int gera uma interrupção quando uma mensagem válida é recebida e carr
 
 ![](notes/images/direcao_mcp2515_montagem.png)
 
+Balbino me emprestou a esp dele: o pinout é diferente
+![[Pasted image 20230616171005.png]]
+![[Pasted image 20230616171148.png]]
+
 ##### Código
 ==Código nó transmissor ==
 ```

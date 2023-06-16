@@ -40,7 +40,7 @@ A eletrônica é o conjunto de circuitos e componentes que gerenciam e controlam
 
 ### Direção
 
-O módulo de [direção elétrica](Direção.md) é responsável por controlar o sistema de direção elétrica assistida (EPS), que auxilia o piloto na condução do veículo. O EPS consiste em um motor elétrico acoplado à coluna de direção, que aplica um torque proporcional à força exercida pelo piloto no volante. O módulo de direção recebe o sinal do sensor de torque no volante e envia um comando para o motor do EPS, ajustando o nível de assistência conforme a velocidade do veículo. O módulo também monitora a temperatura e a corrente do motor do EPS, além de enviar dados para o sistema de telemetria.
+O módulo de [direção elétrica](notes/elétrica/Direção.md) é responsável por controlar o sistema de direção elétrica assistida (EPS), que auxilia o piloto na condução do veículo. O EPS consiste em um motor elétrico acoplado à coluna de direção, que aplica um torque proporcional à força exercida pelo piloto no volante. O módulo de direção recebe o sinal do sensor de torque no volante e envia um comando para o motor do EPS, ajustando o nível de assistência conforme a velocidade do veículo. O módulo também monitora a temperatura e a corrente do motor do EPS, além de enviar dados para o sistema de telemetria.
 
 ## Telemetria
 
@@ -57,5 +57,5 @@ Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o pr
 >[!INFO] Veja também sobre:
 >
 > 🔗[Escolha de sensores](notes/elétrica/Escolha%20de%20sensores.md) <br/>
-> 🔗 [Simulador](notes/telemetria/Simulador.md) <br/>
+> 🔗 [Simulador](notes/telemetria/simulador.md) <br/>
 > 🔗  [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância) <br/>
