@@ -950,76 +950,219 @@ SP0 and SP1 are used internally to communicate with the built-in flash memory, a
 ![](notes/images/direcao_CAN.png)
 
 Protocolo CAN (Controller Area Network) é um protocolo de comunicação serial simultânea:
--       transmite dados a uma taxa de até 1 Mbps em barramentos de até 40 metros;
--       síncrono: sincronização no início de cada mensagem enviada ao barramento;
--       multicast: todas as mensagens são recebidas por todos os módulos da rede;
--       multi-mestre: todos módulos podem ser mestre ou escravo em determinado momento;
--       Suporta até 120 nós por barramentos;
--       CSMA/CD with NDA: caso duas mensagens sejam enviadas ao barramento ao mesmo instante, o módulo de menor prioridade cessará sua transmissão e o de maior continuará enviando sua mensagem, sem ter que reiniciá-la;
--       NRZ (Non Return to Zero): cada bit transmitido representa efetivamente um dado;
--       Protocolo regulado: ISO 11898
--       A velocidade de transmissão dos dados é proporcional ao comprimento do barramento;
+- Síncrono: sincronização no início de cada mensagem enviada ao barramento;
+- Multicast: todas as mensagens são recebidas por todos os módulos da rede (cada ECU pode então ler os dados e decidir se os aceita ou ignora) ;
+- Multi-mestre: todos módulos podem ser mestre ou escravo em determinado momento (cada ECU pode assumir o controle do barramento e transmitir informações);
+- Transmite dados a uma taxa de até 1 Mbps em barramentos de até 40 metros (OBS: A velocidade de transmissão dos dados é proporcional ao comprimento do barramento) - Ver figura abaixo (para 125 kb/s pode chegar a 500 metros.);
+- Máximo de 8 bytes de informação útil por quadro, sendo possível fragmentação;
+- CSMA/CD with NDA: caso duas mensagens sejam enviadas ao barramento ao mesmo instante, o módulo de menor prioridade cessará sua transmissão e o de maior continuará enviando sua mensagem, sem ter que reiniciá-la, continua qnd o barramento estiver livre (o receptor armazena os bits recebidos até que a mensagem inteira seja enviada);
+- NRZ (Non Return to Zero): cada bit transmitido representa efetivamente um dado;
+- Protocolo regulado: ISO 11898.
 
 ![](notes/images/direcao_CAN2.png)
 
 O protocolo foi desenvolvido pela BOSCH
 
-##### Configuração dos fios
 
+##### Configuração dos fios
 Há três formas de construir o barramento (bus):
--       2 fios (dados: CAN H - high e CAN L - low),
--       4 fios (dado + VCC e GND, para alimentação dos blocos subsequentes)
--       1 fio (Somente 1 fio de dado: CAN).
+- 2 fios (dados: CAN H - high e CAN L - low),
+- 4 fios (dado + VCC e GND, para alimentação dos blocos subsequentes)
+- 1 fio (Somente 1 fio de dado: CAN).
 
 O barramento é classificado como Par Trançado Diferencial (para 2 e 4 fios): os dados são interpretados pela análise da diferença de potencial entre os fios CAN H e CAN L, por isso não necessita blindagem (pois, caso haja efeito de campo externo, afetará ambos os sinais)
 
-Para velocidades de comunicação acima de 250 kbit/s, é recomendado cabo em par trançado para a minimização de ruídos. É recomendado um resistor externo de 120 Ω/0,25 W para a rede CAN. A secção transversal de cada um dos fios deve ser de no mínimo 0,35mm²
+Para velocidades de comunicação acima de 250 kbit/s, é recomendado cabo em par trançado para a minimização de ruídos. 
+
+É recomendado um resistor externo de 120 Ω/0,25 W para a rede CAN. A secção transversal de cada um dos fios deve ser de no mínimo 0,35mm². Sem os resistores nas extremidades, o sinal pode refletir de volta e interferir no próximo sinal de dados vindo da linha.
 
 ##### Formato dos dados
-
-Os dados são representados por bits recessivos e dominantes. O bit zero é dominante.  Após enviar um bit, cada módulo analisa o barramento e verifica se outro módulo na rede o sobrescreveu.
+Os dados são representados por bits recessivos e dominantes. 
+- ==Bit 0==: é dominante, indica que um nó está transmitindo e que os demais devem esperar até que a transmissão termine antes de transmitir sua mensagem. 
+- ==Bit 1==: recessivo, ocorre quando a tensão em ambas as linhas é ajustada para 2,5V (ou seja, não há diferença de tensão). 
+Após enviar um bit, cada módulo analisa o barramento e verifica se outro módulo na rede o sobrescreveu.
 
 ![](notes/images/direcao_CAN3.png)
 
 ##### Formatos de mensagem:
 
--       CAN 2.0A (padrão): Mensagens com identificador de 11 bits, até 2048 mensagens
+As partes da mensagem são:
+**SOF** : Start of Frame, indica se o barramento CAN está disponível para uso (se tem outro enviando mensagem)
+**ID** :  Identificador do quadro, especifica o que a mensagem significa e quem a está enviando. Menor ID maior prioridade
+**RTR** : A Solicitação de Transmissão Remota indica se um nó envia dados ou solicita dados de outro nó.
+**Control** : contém o _IDE_ (bit de extensão do identificador - 11 bits) e _DLC_ (Data Length Code - 4 bits) especifica quantos bytes de dados estarão na mensagem
+**Data** : 8 bytes de informações reais
+**CRC** : Verificação de redundância cíclica para detecção de erros
+**ACK** : Confirma recebimento adequado dos dados pelo nó
+**EOF** : Fim do frame
 
+>[!attention] Os nós no barramento CAN não possuem IDs. Em vez disso, cada mensagem recebe um CAN ID exclusivo que indica sobre o que é a mensagem. Todos os nós recebem todas as mensagens e cada nó filtra as mensagens que são relevantes para ele.
+
+
+
+- ==CAN 2.0A (padrão)==: Mensagens com identificador de 11 bits, até 2048 mensagens
 ![](notes/images/direcao_CAN4.png)
-
 ![](notes/images/direcao_CAN5.png)
 
--       CAN 2.0B (estendido): identificador de 29 bits, até  5,3*10⁶ de mensagens, entretanto há aumento no tempo de transmissão de cada mensagem
-
+- ==CAN 2.0B (estendido)==: identificador de 29 bits, até  5,3*10⁶ de mensagens, entretanto há aumento no tempo de transmissão de cada mensagem
 ![](notes/images/direcao_CAN6.png)
-
 ![](notes/images/direcao_CAN7.png)
 
 ##### Tipos de mensagens:
-
--       Frame de Dados: Contém os dados do emissor para o(s) receptor(es);
-
+- ==Frame de Dados==: Contém os dados do emissor para o(s) receptor(es);
 ![](notes/images/direcao_CAN8.png)
 
--       Frame Remota: É uma solicitação de dados partindo de um dos nós;
-
+- ==Frame Remota==: É uma solicitação de dados partindo de um dos nós;
 ![](notes/images/direcao_CAN9.png)
 
--       Frame de Erro: É um frame enviado por qualquer um dos nós ao identificar um erro no barramento e pode ser detectado por todos os nós;
-
+- ==Frame de Erro==: É um frame enviado por qualquer um dos nós ao identificar um erro no barramento e pode ser detectado por todos os nós;
 ![](notes/images/direcao_CAN10.png)
--       Frame de sobrecarga: Serve para retardar o tráfego no barramento devido à sobrecarga de dados ou atraso em um ou mais nós.
 
+- ==Frame de sobrecarga==: Serve para retardar o tráfego no barramento devido à sobrecarga de dados ou atraso em um ou mais nós.
 ![](notes/images/direcao_CAN11.png)
 
+
 ##### Transceiver (MCP2515 -  Controlador CAN Stand-Alone com Interface SPI)
+O controlador [MCP2515](https://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Stand-Alone-CAN-Controller-with-SPI-20001801J.pdf) (CI maior da placa) usa CAN 2.0B. O transceptor CAN [TJA1050](https://www.nxp.com/docs/en/data-sheet/TJA1050.pdf) (CI menor da placa) atua como um intermediário entre o mcp2515 e o barramento, permite que no máximo 110 nós sejam conectados ao barramento.
 
 ![](notes/images/direcao_MCP2515.png)
+![](direcao_MCP2515_data.png)
 
 Por que usar MCP2515 se a ESP32 ja tem uma porta CAN interna? Existem aplicações que requerem mais de uma porta CAN, e o único recurso do ESP32 aplicável para isso é a interface SPI. Na verdade, hipoteticamente, você pode adicionar até seis portas CAN controladas por SPI ao ESP32
 
+Apresenta cristal de 8MHz (deve ser informado durante a programação)
+Funciona com 3,3V e 5V então não precisa de intermediário entre esp e mcp2515
+
+Já vem com resistor embutido basta posicionar o jump abaixo. Se o módulo for o primeiro ou o último nó da rede CAN, então o jumper deve ser colocado. Se for um nó intermediário, o jumper deve ser removido.
+![](direcao_mcp2515_res.png)
+
+##### Pinout
+
+pino MCP2515 | GPIO ESP
+-|-
+cs | 5
+mosi | 23
+miso | 19
+sck |18
+
+O pino int gera uma interrupção quando uma mensagem válida é recebida e carregada em um dos buffers de recebimento.
+
 ![](notes/images/direcao_MCP2515_pinout.png)
 
+![](notes/images/direcao_ESP_CAN_pinout.png)
+
+![](notes/images/direcao_mcp2515_montagem.png)
+
+##### Código
+==Código nó transmissor ==
+```
+#include <CAN.h>
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial);
+
+  Serial.println("CAN Sender");
+
+  // start the CAN bus at 500 kbps
+  if (!CAN.begin(500E3)) {
+    Serial.println("Starting CAN failed!");
+    while (1);
+  }
+}
+
+void loop() {
+  // send packet: id is 11 bits, packet can contain up to 8 bytes of data
+  Serial.print("Sending packet ... ");
+
+  CAN.beginPacket(0x12);
+  CAN.write('h');
+  CAN.write('e');
+  CAN.write('l');
+  CAN.write('l');
+  CAN.write('o');
+  CAN.endPacket();
+
+  Serial.println("done");
+
+  delay(1000);
+
+  // send extended packet: id is 29 bits, packet can contain up to 8 bytes of data
+  Serial.print("Sending extended packet ... ");
+
+  CAN.beginExtendedPacket(0xabcdef);
+  CAN.write('w');
+  CAN.write('o');
+  CAN.write('r');
+  CAN.write('l');
+  CAN.write('d');
+  CAN.endPacket();
+
+  Serial.println("done");
+
+  delay(1000);
+}
+```
+
+==Código nó receptor==
+```
+#include <CAN.h>
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial);
+
+  Serial.println("CAN Receiver Callback");
+
+  // start the CAN bus at 500 kbps
+  if (!CAN.begin(500E3)) {
+    Serial.println("Starting CAN failed!");
+    while (1);
+  }
+
+  // register the receive callback
+  CAN.onReceive(onReceive);
+}
+
+void loop() {
+  // do nothing
+}
+
+void onReceive(int packetSize) {
+  // received a packet
+  Serial.print("Received ");
+
+  if (CAN.packetExtended()) {
+    Serial.print("extended ");
+  }
+
+  if (CAN.packetRtr()) {
+    // Remote transmission request, packet contains no data
+    Serial.print("RTR ");
+  }
+
+  Serial.print("packet with id 0x");
+  Serial.print(CAN.packetId(), HEX);
+
+  if (CAN.packetRtr()) {
+    Serial.print(" and requested length ");
+    Serial.println(CAN.packetDlc());
+  } else {
+    Serial.print(" and length ");
+    Serial.println(packetSize);
+
+    // only print packet data for non-RTR packets
+    while (CAN.available()) {
+      Serial.print((char)CAN.read());
+    }
+    Serial.println();
+  }
+
+  Serial.println();
+}
+```
+
+>[!attention] OBS: Observe que a função de loop é deixada em branco, pois o esboço usa uma interrupção para notificar o Arduino sempre que uma mensagem válida é recebida e carregada em um dos buffers de recebimento.
 # 3. Encoder
 
 ![](notes/images/direcao_encoder.png)
@@ -1572,12 +1715,13 @@ void loop() {}
 
 [1]  [Dados motor de passo NEMA 34](https://www.fernandok.com/)
 [2]  [Sinalização erro LED HSS86]([HSS86 and 2HSS86H Closed Loop Drivers (cnczone.com)](https://www.cnczone.com/forums/servo-motors-drives/356990-software.html))
-[3]  [Comunicação CAN na ESP32 ](https://www.fernandok.com/2018/07/protocolo-can-yes-we-can.html)
+[3]  [Código CAN na ESP32 usando SN65HVD230 ](https://www.fernandok.com/2018/07/protocolo-can-yes-we-can.html)
 [4]  [Uso software HSS86](https://www.youtube.com/watch?v=2x_IKvZJIPQ)
 [5]  [Projeto encoder com arduino](https://easytromlabs.com/arduino/arduino-lab-09-leitura-de-um-encoder-industrial-heidenhain-com-o-arduino/)
 [6]  [Uso de interrupções na ESP32]([Uso de interrupções externas com ESP32 - MakerHero](https://www.makerhero.com/blog/uso-de-interrupcoes-externas-com-esp32/)
 [7]  [Introdução geral sobre rede CAN](http://www.alexag.com.br/Artigos/SAE2002.pdf)
-[8]  [Tipos de CAN (low speed, high speed and FD)](https://dewesoft.com/blog/what-is-can-bus)
+[8]  [Transceiver MCP2515 com Arduino](https://lastminuteengineers.com/mcp2515-can-module-arduino-tutorial/)
+[9]  [Tipos de CAN (low speed, high speed and FD)](https://dewesoft.com/blog/what-is-can-bus)
 
 <!--
 Motor DC 4000 RPM redução 1:8 encoder 15 passos, plataforma: Arduino

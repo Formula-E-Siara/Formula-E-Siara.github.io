@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/notes/elétrica/rascunho.md",
+                "file": "content/notes/elétrica/Direção.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "2c335a66b60bbc42",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/notes/elétrica/rascunho.md",
+                "file": "content/notes/elétrica/Direção.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/notes/elétrica/rascunho.md",
+                "file": "content/notes/elétrica/Direção.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/notes/elétrica/rascunho.md"
+                "file": "content/notes/elétrica/Direção.md"
               }
             }
           }
@@ -156,34 +156,39 @@
   },
   "active": "4ff0a408c12e5850",
   "lastOpenFiles": [
+    "content/notes/FESiará.md",
+    "content/notes/elétrica/Direção.md",
+    "content/_index.md",
+    "content/notes/Como Realizar Modificações.md",
+    "content/notes/images/direcao_mcp2515_montagem.png",
+    "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
+    "content/notes/images/direcao_MCP2515_pinout.png",
+    "content/notes/images/direcao_ESP_CAN_pinout.png",
+    "content/notes/images/direcao_MCP2515_data.png",
+    "content/notes/elétrica/Inversor de Frequência.md",
+    "content/notes/elétrica/Escolha de sensores.md",
+    "content/notes/elétrica/Controle manual à distância.md",
+    "content/notes/elétrica/CANopen.md",
+    "content/notes/elétrica/Battery Managment System.md",
+    "content/notes/elétrica/Balanceamento de Baterias.md",
+    "content/notes/elétrica/Baterias.md",
+    "content/notes/images/direcao_CAN6.png.crdownload",
+    "content/notes/images/direcao_CAN4.png.crdownload",
+    "content/notes/images/direcao_CAN4_2.png",
+    "content/notes/images/direcao_CAN4_2.png.crdownload",
+    "content/notes/images/direcao_mcp2515_res.png",
+    "Pasted image 20230615165651.png",
+    "Untitled.canvas",
+    "2023-06-15.md",
+    "content/notes/elétrica/rascunho.md",
     "content/private/private-note.md",
     "content/private/README.md",
-    "content/notes/FESiará.md",
     "content/notes/images/Arduino_WiFi.png",
-    "content/_index.md",
-    "content/notes/elétrica/Direção.md",
-    "content/notes/elétrica/rascunho.md",
-    "content/notes/elétrica/Inversor de Frequência.md",
     "Entire wiki.canvas",
-    "content/notes/elétrica/Battery Managment System.md",
     "[Uso.md",
     "content/private/screenshot.png",
-    "content/notes/Como Realizar Modificações.md",
     "content/notes/telemetria/simulador.md",
-    "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
-    "content/notes/elétrica/Baterias.md",
-    "content/notes/elétrica/Balanceamento de Baterias.md",
-    "content/notes/elétrica/CANopen.md",
-    "content/notes/elétrica/Controle manual à distância.md",
-    "content/notes/elétrica/Escolha de sensores.md",
     "content/notes/images/direcao_motor_driver.png",
-    "content/notes/images/Arduino_WiFi2.png",
-    "content/notes/images/direcao_app1_example.jpg",
-    "content/notes/images/direcao_CAN.png",
-    "content/notes/images/direcao_KA7805.png",
-    "content/notes/images/direcao_CAN7.png",
-    "content/notes/images/direcao_CAN4.png",
-    "content/notes/images/direcao_pinout_attach.png",
     "content/images/direcao_soft_HSS86_2.png.md",
     "2023-06-14.md",
     "content/images/direcao_KA7805.png.~tmp",
@@ -192,7 +197,6 @@
     "content/templates/post.md",
     "content/private/CODE_OF_CONDUCT.md",
     "notes/images/obsidian-settings.png.md",
-    "Pasted github-desktop-tut4.md",
     "notes/images",
     "notes",
     "Untitled 1.canvas"
