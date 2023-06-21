@@ -27,7 +27,6 @@ O acionamento do motor está sendo feito com o apoio do driver dedicado ([HSS86]
 - Frequência de resposta de pulso de 200 kHz;
 - Possibilidade de escolha entre 16 micropassos (em escala de 400 a 51200 crosteps/rev) através das chaves físicas na lateral do driver.
 - Proteção contra sobrecorrente, sobretensão e diferença de posição.
-
 ### 1.1.1. Diagrama de conexão
 
 ![](notes/images/direcao_esquema_hss86.png)
@@ -41,8 +40,8 @@ O acionamento do motor está sendo feito com o apoio do driver dedicado ([HSS86]
 ![](notes/images/direcao_conexao_encoder_hss86.png)
 
  
-## 1.2. Hybrid Servo Driver (TMA DES HSS86)
 
+## 1.2. Hybrid Servo Driver (TMA DES HSS86)
 ### 1.2.1. Luz segurança
 
 ![](notes/images/direcao_luz_seg_hss86.png)
@@ -144,17 +143,15 @@ void loop(){
 #### Error
 
 ![](notes/images/direcao_error.png)
-## 1.3. Controlando por celular
 
+# 2. Controle remoto
+## 2.1. Controlando por celular (Provisório)
 Celular(bluetooth) → ESP → optoacoplador → driver HSS86
-
-### 1.3.1. ESP (portas BT)
+### 2.1.1. ESP (portas BT)
 
 ![](notes/images/direcao_pinout_esp32.png)
-### 1.3.2. (Saída ESP)
-
+### 2.1.2. (Saída ESP)
 Necessário entre esp e driver pq saída esp é de 3,3V
-
 #### Optacoplador TLP281-4
 
 Prático 4 entradas -> 4 saídas
@@ -192,7 +189,7 @@ Pelo datasheet, temos:
 
 Usaremos alimentação de saída em 24V (tem q estar entre 15 e 30V e o datasheet do hss dá opção de 5V, 12V e 24V). Assim, lembrando pelo diagrama 1.1.1. e tabela 1.2.3. precisamos usar resistência de aproximamente 2k, usaremos 2k2 Ω
 
-### 1.3.4. (Alimentação ESP)
+### 2.1.3. (Alimentação ESP)
 
 A alimentação da esp pode ser feita pelo próprio conector USB (5,0V) ou então através do pino 5V ou VIN , com uma alimentação regulada de 5,0V
 
@@ -204,8 +201,7 @@ A alimentação da esp pode ser feita pelo próprio conector USB (5,0V) ou entã
 
 ![](notes/images/direcao_KA7805_data2.png)
 
-### 1.3.5. Aplicativo para controlar pelo celular
-
+### 2.1.4. Aplicativo para controlar pelo celular
 #### Aplicativo 1: Só terminal Serial
 
 ![](notes/images/direcao_app1.jpg)
@@ -777,71 +773,44 @@ void loop(){
       //L (left)
 
       case 'L':
-
         enable=1;direcao=0;
-
         //Serial.print(comando);Serial.println(" -> d0");
-
       break;
 
       //R (right)
-
       case 'R':
-
         enable=1;direcao=1;
-
         //Serial.print(comando);Serial.println(" -> d1");
-
       break;
 
       //S(stop)
-
       case 'S':
-
       case 'D':
-
         enable=0;
-
         //Serial.print(comando);Serial.println(" -> e0");
-
       break;
 
       //Speed
 
       case '0': case '1': case '2': case '3':
-
       case '4': case '5': case '6': case '7':
-
       case '8': case '9':
-
         velocidade=comando.toInt();
-
         periodo=pmin*(1+(10-velocidade)/2);
-
         //PA com razao sendo metade do periodo minimo
-
         //Serial.print(comando);Serial.printf(" p%i\n",periodo);
-
       break;
-
+      
       case 'q':
-
         velocidade=10;
-
         periodo=pmin*(1+(10-velocidade)/2);
-
         //PA com razao sendo metade do periodo minimo
-
         //Serial.print(comando);Serial.printf(" p%i\n",periodo);
-
       break;
 
       default:
-
         Serial.println("\nERRO4");
-
       break;
-
     }
 
     digitalWrite(pin_ena, enable);
@@ -884,28 +853,110 @@ void loop(){
 
 ````
 
-# 2. Controle remoto
+### !2.1.5. RMT
 
-## 2.1. Possibilidades
+O periférico RMT (Controle Remoto) do ESP32 foi projetado inicialmente para enviar e receber sinais infravermelhos de controle remoto, mas devido ao seu design pode ser usado para gerar vários tipos de sinais. Algumas funcionalidades:
+- Transmitir ou receber sinais infravermelhos, com qualquer protocolo;
+- Gerador de sequência de uso geral;
+- Transmitir sinais em um loop controlado por hardware, com número finito ou infinito de vezes;
+- Transmissão simultânea multicanal
 
+Os dados são transmitidos em símbolos dividimos em 2 partes: 
+- Duração sinal (15 bit);
+- Nível do sinal (1 bit) - alto ou baixo;
+![](notes/images/direcao_rmt1.png)
+
+Sinal de saída:
+![](notes/images/direcao_rmt2.png)
+
+É possível também fazer o processo contrário de armazenamento de onda
+![](notes/images/direcao_rmt3.png)
+
+O RMT possui 8 canais, dos quais 6 estão disponíveis e podem ser mapeados para qualquer pino GPIO ( _Nota:_ Pinos `P13`- `P18` só podem ser usados ​​como entradas).
+![](notes/images/direcao_rmt4.png)
+
+```
+
+#include <driver/rmt.h>
+
+const rmt_channel_t canal_rmt = RMT_CHANNEL_7;  // define qual dos 7 canais rmt usaremos (cada um tem seu limite de resolução e largura de pulso)
+
+const int pin_pul = 4;
+
+  
+
+void setup() {
+
+  rmt_config_t config; //criar variável para armazenar caracteristicas de config do canal rmt
+
+  config.rmt_mode = RMT_MODE_TX; //configurado como transmissor
+
+  config.channel = canal_rmt;
+
+  config.gpio_num = GPIO_NUM_4;
+
+  config.mem_block_num = 1; //alocar um bloco de memória para armazenar os dados de saída
+
+  config.tx_config.loop_en = false; //desativa modo repetição
+
+  config.tx_config.carrier_en = false;
+
+  config.tx_config.idle_output_en = true;
+
+  config.tx_config.idle_level = RMT_IDLE_LEVEL_LOW; //estado lógico durante o período ocioso
+
+  config.clk_div = 80; //clock da ESP32 é 80Mhz, ele estabelece que cada unidade de tempo nesse canal será de clk/80
+
+  
+
+  rmt_config(&config); //aplicar as configurações ao módulo RMT
+
+  rmt_driver_install(config.channel, 0, 0); //instalar o driver RMT
+
+}
+
+  
+
+void loop() {
+
+  //uma unidade de tempo = 1us
+
+  rmt_item32_t item; //variavel para definir os níveis e durações dos pulsos a serem enviados.
+
+  item.level0 = 1;
+
+  item.duration0 = 100;
+
+  item.level1 = 0;
+
+  item.duration1 = 100;
+
+  rmt_write_items(canal_rmt, &item, 1, true); //demora 20us pra fazer esse comando.
+
+}
+
+```
+
+
+
+## 2.2. Possibilidades
 1. Bluetooth: O Bluetooth é uma tecnologia sem fio de curto alcance que é amplamente utilizada em dispositivos móveis, como smartphones e fones de ouvido. É relativamente fácil de configurar e oferece uma boa taxa de transferência de dados para distâncias de até 10 metros em ambientes internos.
 2. WiFi: O WiFi é um protocolo de comunicação sem fio de médio alcance que é amplamente utilizado em redes domésticas e empresariais. É mais complexo de configurar do que o Bluetooth, mas oferece taxas de transferência de dados mais altas e uma cobertura de alcance mais ampla para distâncias de até cerca de 50 metros em ambientes internos.
 3. Zigbee: Zigbee é um protocolo de comunicação sem fio de curto alcance que é frequentemente usado em sistemas de automação residencial e industrial. É especialmente adequado para aplicações que exigem baixo consumo de energia e comunicação confiável para distâncias de até cerca de 10 metros.
 4. LoRa: LoRa é um protocolo de comunicação de longo alcance que é adequado para aplicações que exigem cobertura em grandes áreas. Embora a distância máxima de comunicação possa ser superior a vários quilômetros em condições ideais, a taxa de transferência de dados é relativamente baixa. Portanto, é mais adequado para aplicações que exigem comunicação de baixa taxa de dados, como monitoramento de sensores remotos.
-
-### 2.1.1. Phantom 4
+### 2.2.1. Phantom 4
 
 ![](notes/images/direcao_phantom4.png)
 
 O controle remoto do Phantom 4 utiliza uma tecnologia de comunicação proprietária da DJI, chamada de Lightbridge, que não é diretamente compatível com microcontroladores convencionais, como o Arduino
 
-### 2.1.2. Arduino + módulo WiFi
+### 2.2.2. Arduino + módulo WiFi
 
 ![](notes/images/Arduino_WiFi.png)
 
 ![](notes/images/Arduino_WiFi2.png)
 
-### 2.1.3. ESP para Raspberry (SPI)
+### 2.2.3. ESP para Raspberry (SPI)
 
 Uma opção seria a leitura do controle remoto  feita pela raspberry (controlador) tal que esta envie os sinais para esp (periférico) que controlará o driver
 
@@ -941,7 +992,7 @@ MOSI: serial data in (SDI)
 
 SP0 and SP1 are used internally to communicate with the built-in flash memory, and you should not use them for other tasks.
 
-### !2.1.4. ESP para Raspberry (CAN)
+### !2.2.4. ESP para Raspberry (CAN)
 
 #### Protocolo CAN
 
@@ -1166,13 +1217,14 @@ void onReceive(int packetSize) {
 }
 ```
 
->[!attention] OBS: Observe que a função de loop é deixada em branco, pois o esboço usa uma interrupção para notificar o Arduino sempre que uma mensagem válida é recebida e carregada em um dos buffers de recebimento.
+**
+
+
 # 3. Encoder
 
 ![](notes/images/direcao_encoder.png)
 
 ## 3.1. Possibilidades
-
 ### 3.1.1. Encoder externo
 
 (Pegar os dados diretamente do motor)
@@ -1714,18 +1766,19 @@ void TaskSerialCode(void *pvParameters) {
 
 void loop() {}
 ````
+>[!attention] OBS: Observe que a função de loop é deixada em branco, pois o esboço usa uma interrupção para notificar o Arduino sempre que uma mensagem válida é recebida e carregada em um dos buffers de recebimento.
+>
 
 # 4. Bibliografia
-
-[1]  [Dados motor de passo NEMA 34](https://www.fernandok.com/)
-[2]  [Sinalização erro LED HSS86]([HSS86 and 2HSS86H Closed Loop Drivers (cnczone.com)](https://www.cnczone.com/forums/servo-motors-drives/356990-software.html))
-[3]  [Código CAN na ESP32 usando SN65HVD230 ](https://www.fernandok.com/2018/07/protocolo-can-yes-we-can.html)
-[4]  [Uso software HSS86](https://www.youtube.com/watch?v=2x_IKvZJIPQ)
-[5]  [Projeto encoder com arduino](https://easytromlabs.com/arduino/arduino-lab-09-leitura-de-um-encoder-industrial-heidenhain-com-o-arduino/)
-[6]  [Uso de interrupções na ESP32]([Uso de interrupções externas com ESP32 - MakerHero](https://www.makerhero.com/blog/uso-de-interrupcoes-externas-com-esp32/)
-[7]  [Introdução geral sobre rede CAN](http://www.alexag.com.br/Artigos/SAE2002.pdf)
-[8]  [Transceiver MCP2515 com Arduino](https://lastminuteengineers.com/mcp2515-can-module-arduino-tutorial/)
-[9]  [Tipos de CAN (low speed, high speed and FD)](https://dewesoft.com/blog/what-is-can-bus)
+(1)  [Dados motor de passo NEMA 34](https://www.fernandok.com/)
+(2)  [Sinalização erro LED HSS86]([HSS86 and 2HSS86H Closed Loop Drivers (cnczone.com)](https://www.cnczone.com/forums/servo-motors-drives/356990-software.html))
+(3)  [Código CAN na ESP32 usando SN65HVD230 ](https://www.fernandok.com/2018/07/protocolo-can-yes-we-can.html)
+(4)  [Uso software HSS86](https://www.youtube.com/watch?v=2x_IKvZJIPQ)
+(5)  [Projeto encoder com arduino](https://easytromlabs.com/arduino/arduino-lab-09-leitura-de-um-encoder-industrial-heidenhain-com-o-arduino/)
+(6)  [Uso de interrupções na ESP32]([Uso de interrupções externas com ESP32 - MakerHero](https://www.makerhero.com/blog/uso-de-interrupcoes-externas-com-esp32/)
+(7)  [Introdução geral sobre rede CAN](http://www.alexag.com.br/Artigos/SAE2002.pdf)
+(8)  [Transceiver MCP2515 com Arduino](https://lastminuteengineers.com/mcp2515-can-module-arduino-tutorial/)
+(9)  [Tipos de CAN (low speed, high speed and FD)](https://dewesoft.com/blog/what-is-can-bus)
 
 <!--
 Motor DC 4000 RPM redução 1:8 encoder 15 passos, plataforma: Arduino

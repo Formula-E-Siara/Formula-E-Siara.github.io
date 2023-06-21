@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4ff0a408c12e5850",
+            "id": "90ac1c7bc3bea48c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -155,13 +155,17 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "4ff0a408c12e5850",
+  "active": "90ac1c7bc3bea48c",
   "lastOpenFiles": [
+    "content/notes/elétrica/Direção.md",
+    "content/notes/images/direcao_rmt4.png",
+    "content/notes/images/direcao_rmt3.png",
+    "content/notes/images/direcao_rmt2.png",
+    "content/notes/images/direcao_rmt1.png",
     "Pasted image 20230616171148.png",
     "Pasted image 20230616171118.png",
     "Pasted image 20230616171005.png",
     "content/notes/elétrica/Controle manual à distância.md",
-    "content/notes/elétrica/Direção.md",
     "Entire wiki.canvas",
     "content/notes/FESiará.md",
     "content/_index.md",
@@ -170,7 +174,6 @@
     "content/notes/elétrica/Estudo de Baterias Substitutivas.md",
     "content/notes/images/direcao_MCP2515_pinout.png",
     "content/notes/images/direcao_ESP_CAN_pinout.png",
-    "content/notes/images/direcao_MCP2515_data.png",
     "content/notes/elétrica/Inversor de Frequência.md",
     "content/notes/elétrica/Escolha de sensores.md",
     "content/notes/elétrica/CANopen.md",
@@ -179,16 +182,12 @@
     "content/notes/elétrica/Baterias.md",
     "content/notes/images/direcao_CAN6.png.crdownload",
     "content/notes/images/direcao_CAN4.png.crdownload",
-    "content/notes/images/direcao_CAN4_2.png",
     "content/notes/images/direcao_CAN4_2.png.crdownload",
-    "content/notes/images/direcao_mcp2515_res.png",
-    "Pasted image 20230615165651.png",
     "Untitled.canvas",
     "2023-06-15.md",
     "content/notes/elétrica/rascunho.md",
     "content/private/private-note.md",
     "content/private/README.md",
-    "content/notes/images/Arduino_WiFi.png",
     "[Uso.md",
     "content/notes/telemetria/simulador.md",
     "content/images/direcao_soft_HSS86_2.png.md",
