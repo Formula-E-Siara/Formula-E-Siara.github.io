@@ -46,3 +46,4 @@ O módulo de baterias é responsável por monitorar e proteger o pacote de bater
 A telemetria é o sistema responsável por transmitir e receber dados entre o veículo e uma estação base. Ela permite acompanhar em tempo real o funcionamento e o desempenho do veículo durante os testes e as provas da competição. A nossa telemetria usa um transceptor sem fio que opera na faixa de 2,4 GHz, com uma taxa de transmissão de 250 kbps. O transceptor se comunica com um computador na estação base, que exibe os dados em uma interface gráfica desenvolvida pela equipe. A telemetria também permite enviar comandos para o veículo, como ligar ou desligar sistemas ou alterar parâmetros de controle.
 
 # [Simulador](./telemetria/simulador.md)
+# [Kernel real time] (./embarcados/kerneltemporeal.md)

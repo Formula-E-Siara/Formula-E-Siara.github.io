@@ -20,11 +20,13 @@ O fabricante não disponibilizou patch RT, então precisamos baixar o source do 
 
 Com uma pesquisa do google você pode encontrar o manual e seguir os passos da seção 6.1 antes de fazer `make install`, mas pode ir 100% por aqui.
 
-###  Passos
+### Kernel Source
 Baixar source do kernel, execute:
 ```
 git clone --depth=1 -b orange-pi-5.10-rk3588 https://github.com/orangepi-xunlong/linux-orangepi
 ```
+
+### Configurações antes do PREEMPT_RT
 Quando terminar de clonar
 ```
 cd linux-orangepi
@@ -44,14 +46,20 @@ config ARCH_SUPPORTS_RT
        def_bool y
 ```
 
+### Configurar compilação para PREEMPT_RT
 Dê ctrl+o, enter e ctrl+x, ou seja, salvar no mesmo nome e sair do arquivo.
 
 Agora rode o comando: `make menuconfig`
 
 Faça o seguinte caminho: General setup -> Preemption Model, selecione com o espaço Fully preemptible kernel, enter. 
 
+![](notes/images/kernel_rt/1.png)
+![](notes/images/kernel_rt/2.png)
+![](notes/images/kernel_rt/3.png)
+
 Na tela anterior aperte save, dê ok e já pode sair.
 
+### Compilando e aplicando o patch
 Os próximos comandos são mais diretos e fáceis, execute um após o outro.
 ```
 make -j10
