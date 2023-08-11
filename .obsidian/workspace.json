@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "96fc536085d8644c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -62,6 +73,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "a62b487d3c0755d6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -146,7 +165,7 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "da02c39a55dc5ffe",
+  "active": "96fc536085d8644c",
   "lastOpenFiles": [
     "Pasted image 20230426145114.png",
     "Pasted image 20230426145104.png",
