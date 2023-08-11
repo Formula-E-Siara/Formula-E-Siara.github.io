@@ -57,6 +57,6 @@ Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o pr
 >[!INFO] Veja também sobre:
 >
 > 🔗[Escolha de sensores](notes/elétrica/Escolha%20de%20sensores.md) <br/>
-> 🔗 [Simulador](notes/telemetria/simulador.md)
-# [Kernel real time] (./embarcados/kerneltemporeal.md) <br/>
+> 🔗 [Simulador](notes/telemetria/simulador.md) <br/>
 > 🔗  [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância) <br/>
+> 🔗 [Kernel Real Time](notes/embarcados/kerneltemporeal) <br/>
