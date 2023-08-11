@@ -53,11 +53,11 @@ Agora rode o comando: `make menuconfig`
 
 Faça o seguinte caminho: General setup -> Preemption Model, selecione com o espaço Fully preemptible kernel, enter. 
 
-![](notes/images/kernel_rt/1.png)
+![](content/images/kernel_rt/1.png)
 
-![](notes/images/kernel_rt/2.png)
+![](content/images/kernel_rt/2.png)
 
-![](notes/images/kernel_rt/3.png)
+![](content/images/kernel_rt/3.png)
 
 Na tela anterior aperte save, dê ok e já pode sair.
 
