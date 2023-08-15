@@ -1,12 +1,37 @@
-{{ define "main" }}
-<main>
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-  <div>
-    {{ range .Pages }}
-      {{ .Render "summary" }}
-    {{ end }}
-  </div>
-</main>
-{{ end }}
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+{{ partial "head.html" . }}
+
+<body>
+{{partial "search.html" .}}
+<div class="singlePage">
+    <!-- Begin actual content -->
+    {{partial "header.html" .}}
+    <article>
+      {{if .Title}}<h1>{{ .Title }}</h1>{{end}}
+      <p class="meta">
+        {{ i18n "last_updated" }} {{ partial "date-fmt.html" .}} 
+          {{ partial "github.html" . }}
+      </p>
+
+      <!-- Ranges through content/posts/*.md -->
+      <ul class="all-posts">
+        {{range .Site.RegularPages}}
+          {{ if eq .Section "posts" }} <!-- Replace "posts" with your desired folder name -->
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        {{end}}
+      </ul>
+
+      <ul class="tags">
+          {{ range (.GetTerms "tags") }}
+          <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li>
+          {{ end }}
+      </ul>
+      {{partial "toc.html" .}}
+      {{partial "textprocessing.html" . }}
+    </article>
+    {{partial "footer.html" .}}
+</div>
+</body>
+</html>

@@ -74,7 +74,7 @@
   {{ end }}
 
   <!--  Preload page vars  -->
-  {{$linkIndex := resources.Get "indices/linkIndex.json" | resources.Fingerprint
+  {{$linkIndex := resources.Get "indices/linkIndex.json" | resources.Fingerprint 
   "md5" | resources.Minify | }} {{$contentIndex := resources.Get
   "indices/contentIndex.json" | resources.Fingerprint "md5" | resources.Minify
   }}
