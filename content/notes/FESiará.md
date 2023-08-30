@@ -60,3 +60,4 @@ Sobre a Inter comunicação(interna), todos subsistemas se comunicarão com o pr
 > 🔗 [Simulador](notes/telemetria/simulador.md) <br/>
 > 🔗  [Controle manual à distância](notes/elétrica/Controle%20manual%20à%20distância) <br/>
 > 🔗 [Kernel Real Time](notes/embarcados/kerneltemporeal) <br/>
+> 🔗 [Controle via CANopen](notes/embarcados/CANopen.md) <br/>
